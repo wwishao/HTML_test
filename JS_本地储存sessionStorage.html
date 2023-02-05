@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_本地储存sessionStorage</title>
+</head>
+<body>
+    <!-- 
+         sessionStorage
+         窗口关闭即止，可储存多个数据 
+         在同一个窗口（页面）下数据可以共享
+         以键值对形式存储
+        -->
+    <input type="text">
+    <button class="set">储存数据</button>
+    <button class="get">获取数据</button>
+    <button class="remove">删除数据</button>
+    <button class="del">清空所有数据</button>
+    <script>
+        var ipt = document.querySelector('input');
+        var set = document.querySelector('.set');
+        var get = document.querySelector('.get');
+        var remove = document.querySelector('.remove');
+        var del = document.querySelector('.del');
+
+        set.addEventListener('click',function() {
+            // 当点击了之后，就可以把表单里面的储存起来
+            var val = ipt.value;
+            sessionStorage.setItem('uname',val);
+            sessionStorage.setItem('psw',val);
+        })
+        get.addEventListener('click',function() {
+            // 当点击了之后，就可以把表单里面的值获取过来
+            console.log(sessionStorage.getItem('uname'));
+        })
+        remove.addEventListener('click',function() {
+            // 当点击了之后，就删除本地数据
+            sessionStorage.removeItem('uname');
+        })
+        del.addEventListener('click',function() {
+            // 当点击了之后，就删除所有数据
+            sessionStorage.clear();
+        })
+    </script>
+</body>
+</html>

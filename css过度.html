@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>过度</title>
+    <style>
+        div{
+            width: 250px;
+            height: 250px;
+            background-color: pink;
+            transition: all 2s;
+            /*过渡*/
+            /* transition: width 1s, background-color 1s; */
+            /*所有有变化的属性all 也可以省略*/
+            /* transition: all 1s; */
+            /* transition: 1s; */
+
+        }
+        div:hover{
+            width: 500px;
+            height: 500px;
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

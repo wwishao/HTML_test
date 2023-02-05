@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_删除事件</title>
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <script>
+        var divs = document.querySelectorAll('div');
+        divs[0].onclick = function() {
+            alert(1);
+            // 传统方式删除事件
+            divs[0].onclick = null;
+        }
+        divs[1].addEventListener('click',fn) // 里面的函数 fn 不需要添加小括号  不加括号是返回函数本身，加了括号是返回函数里面的值
+        function fn() {
+            alert(2);
+            divs[1].removeEventListener('click',fn)
+        }
+
+    </script>
+</body>
+</html>

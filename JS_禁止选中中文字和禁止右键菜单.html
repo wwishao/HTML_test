@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_禁止选中中文字和禁止右键菜单</title>
+</head>
+<body>
+    <p>我不给你按鼠标右键和选中文字</p>
+    <script>
+        // 1. contextmenu 禁用右键菜单
+        document.addEventListener('contextmenu',function(e) {
+            e.preventDefault();
+        });
+
+        // 2. 禁止选中文字 selectstart
+        document.addEventListener('selectstart',function(e) {
+            e.preventDefault();
+        })
+    </script>
+</body>
+</html>

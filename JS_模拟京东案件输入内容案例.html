@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_模拟京东案件输入内容案例</title>
+</head>
+<body>
+    <input accesskey="s" type="text">
+    <script>
+        var input = document.querySelector('input');
+        document.addEventListener('keyup',function(e) {
+            // console.log(e.keyCode);
+            if(e.keyCode === 83){
+                input.focus();
+            }
+        });
+    </script>
+</body>
+</html>

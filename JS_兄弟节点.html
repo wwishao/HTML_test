@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_兄弟节点</title>
+</head>
+<body>
+    <div>我是div</div>
+    <span>我是span</span>
+    <script>
+        // 下个节点 nextSibling  个兄弟节点包含元素节点或者文本节点等等
+        // 上个节点previousSibling
+        var div = document.querySelector('div');
+        console.log(div.nextSibling);
+        console.log(div.previousSibling);
+
+        console.log('----');
+        
+        // 2. nextElementSibling  下个节点     previousElementSibling  上个节点  得到的是上一个节点或者下一个节点  
+        // 如果梦游则会返回null  兼容性问题，i9以上支持
+        console.log(div.nextElementSibling);
+        console.log(div.previousElementSibling);
+    </script>
+</body>
+</html>

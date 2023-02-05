@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类中添加方法</title>
+</head>
+<body>
+    <script>
+        // 1.创建类class  创建一个 Star 明星类
+        class Star{
+            // constructor 构造函数
+            constructor(uname,age) {
+                this.uname = uname;
+                this.age = age;
+            }
+            sing(song) {
+                // console.log('我会唱歌');
+                console.log(this.uname + '唱' + song);
+            }
+        }
+        // 1.利用类创建对象 new (实例化)
+        var ldh = new Star('刘德华',18);
+        var pyy = new Star('彭于晏',22);
+        console.log(ldh);
+        console.log(pyy);
+
+        //(1) 类里面所有的函数不需要写function
+        //(2) 多个函数方法之间不需要添加逗号分隔
+        ldh.sing('冰雨');
+        pyy.sing('非爱不可');
+
+    </script>
+</body>
+</html>

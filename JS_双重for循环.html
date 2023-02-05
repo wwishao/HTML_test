@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS_双重for循环</title>
+</head>
+
+<body>
+	
+	<script>
+	
+		// 1. 双重for 循环  语法结构
+		
+		/*
+		for(外层的初始化变量; 外层的条件表达式;外层的操作表达式){
+			for(内层的初始化变量; 内层的条件表达式;内层的操作表达式){
+				// 执行语句;
+				
+			}
+		}
+		*/
+		
+		// 2. 我们可以把里面的循环看做是外层的循环语句
+		// 2. 外层循环一次  内层循环全部
+		// 4. 代码验证
+		for(var i = 1; i <= 3; i++){
+			console.log('这是外层循环的第'+ i + '次');
+			for(var j = 1; j <= 3; j++){
+				console.log('这是内层循环的第'+ j + '次');
+			}
+		}
+	</script>
+</body>
+</html>

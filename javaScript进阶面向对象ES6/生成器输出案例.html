@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 控制台一秒后输出111
+        // 控制台二秒后输出222
+        // 控制台三秒后输出333
+        // setTimeout(() => {
+        //     console.log(111);
+        //     setTimeout(() => {
+        //         console.log(222);
+        //     }, 2000);
+        //     setTimeout(() => {
+        //         console.log(333);
+        //     }, 3000);
+        // }, 1000);
+
+        // 使用生成器函数
+        function one() {
+            setTimeout(() => {
+                console.log(111);
+            scq.next()
+            }, 1000);
+        }
+        function two() {
+            setTimeout(() => {
+                console.log(222);
+            scq.next()
+            }, 2000);
+        }
+        function three() {
+            setTimeout(() => {
+                console.log(333);
+            scq.next()
+            }, 3000);
+        }
+        function* gen() {
+            yield one();
+            yield two();
+            yield three();
+        }
+        let scq = gen()
+        scq.next()
+    </script>
+</body>
+
+</html>

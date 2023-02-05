@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_函数求输入任意两个数字的最大值</title>
+</head>
+<body>
+    
+    <script>
+
+        // 写一个函数,用户输入任意 两个数字的最大值和3个数的最大值  并能出弹运算后的结果。
+        // 三个数的最大值 用数组来比较
+        var num = parseFloat( prompt('请输入第一个数'));
+        var num1 = parseFloat( prompt('请输入第二个数'));
+        var num2 = parseFloat( prompt('请输入第三个数')); // 三个数的最大值
+        function getMaxSum(num,num1,num2){
+        //   return num > num1? num : num1;  // 写法一
+        var arr = [num,num1,num2]; // // 三个数的最大值
+        var newArr = arr[0];
+        for (var i = 1; i < arr.length; i++){  // 三个数的最大值
+          if (arr[0] > arr[i]) {  // 写法二
+                return arr[0];
+            }else{
+                return arr[i + 1];
+            }
+          }
+        }
+        var str = getMaxSum(num,num1,num2);
+        alert('最大的数是' + str);
+    </script>
+</body>
+</html>

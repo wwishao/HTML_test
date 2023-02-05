@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_事件委托</title>
+    <style>
+        * {
+            margin:0; 
+            padding:0;
+            -webkit-tap-highlight-color: transparent;
+            box-sizing: border-box;
+        }
+        ul{
+            list-style: none;
+            width: 500px;
+            height: 200px;
+            background-color: rgb(149, 73, 186);
+            margin: 100px auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-content: flex-start;
+        }
+        li{
+            list-style: none;
+            margin: 0 auto;
+            width: 500px;
+            height: 35px;
+            text-align: center;
+            background-color: rgb(163, 163, 163);
+            line-height: 35px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>弹出对话框1</li>
+        <li>弹出对话框2</li>
+        <li>弹出对话框3</li>
+        <li>弹出对话框4</li>
+        <li>弹出对话框5</li>
+    </ul>
+
+    <script>
+        // 事件委托的核心原理:给父节点添加侦听器， 利用事件冒泡影响每一一个子节点
+        var ul = document.querySelector('ul');
+        ul.addEventListener('click',function(e) {
+            for(var i = 0; i < ul.children.length; i++){
+                ul.children[i].style.backgroundColor = '';
+            }
+            e.target.style.backgroundColor = 'pink';
+            console.log(e.target);
+        });
+    </script>
+</body>
+</html>

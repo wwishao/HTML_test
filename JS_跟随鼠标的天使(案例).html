@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_跟随鼠标的天使(案例)</title>
+    <style>
+        img {
+            width: 50px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="imges\angel.gif" alt="">
+    <script>
+        var img = document.querySelector('img');
+        let flag = null; //节流阀开关
+
+        document.addEventListener('mousemove', function (e) {
+            if(flag) return;
+            // 1. mousemove 只要我们鼠标移动1px就会触发这个事件
+            // 2.核心原理： 每次鼠标移动，我们都会获得最新的鼠标坐标， 把这个x和y坐标做为图片的top和left 值就可以移动图片
+            flag = setTimeout(() => {
+                img.style.left = e.clientX - 20 + 'px';  // 获得到的X坐标设置给图片的left边距，
+                img.style.top = e.clientY - 25 + 'px';   // 获得到的Y坐标设置给图片的top边距，
+            }, 16);
+            flag = null;
+            console.log('ok');
+            //3 . 千万不要忘记给left 和top 添加px 单位
+        });
+    </script>
+</body>
+
+</html>

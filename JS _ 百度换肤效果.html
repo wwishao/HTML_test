@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS _ 百度换肤效果</title>
+    <style>
+        body{
+            background: url(imges/1.jpg) no-repeat center top;
+        }
+        div{
+            text-align: center;
+            margin-top: 100px;
+        }
+        img{
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="imges\1.jpg" alt="">
+        <img src="imges\2.jpg" alt="">
+        <img src="imges\3.jpg" alt="">
+        <img src="imges\4.jpg" alt="">
+    </div>
+    <script>
+
+        // 获取元素
+        var imgs = document.getElementsByTagName('img');
+        var back = document.body;
+        // 处理程序
+        for(var i = 0; i < imgs.length; i++){
+            imgs[i].onclick = function(){
+                // this.src  就是点击图片的路径
+                // 把this.src 给到body 背景
+            back.style.backgroundImage = 'url('+ this.src + ')';
+        }
+    }
+    </script>
+</body>
+</html>

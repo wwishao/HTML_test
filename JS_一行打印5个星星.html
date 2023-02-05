@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS_一行打印5个爱心</title>
+</head>
+
+<body>
+	
+	<script>
+	
+		// 一行打印5个爱心
+		
+		console.log('❤❤❤❤❤');
+		for(var i = 1; i <= 5; i++){
+			console.log('❤');
+		}
+		
+		// 我们采取追加字符串的方式,这样可以打印到控制台上。
+		var str = '';
+		for(var i = 1; i <= 5; i++){
+			str += '❤';
+		}
+		console.log(str);
+		
+		// 用户控制个数
+		var num = prompt('请输入爱心数量');
+		var str = '';
+		for(var i = 1; i <= num; i++){
+			str += '❤';
+		}
+		console.log(str);
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_注册事件的两种方式</title>
+</head>
+<body>
+    <button>传统注册事件</button>
+    <button>方法监听注册事件</button>
+    <button>i9以前版本支持</button>
+    <script>
+        // 特点:注册事件的唯一-性
+        // 同一个元素同一个事件只能设置一个处理函数 ,最
+        // 后注册的处理函数将会覆盖前面注册的处理函数
+        // 1. 传统方式注册事件
+        var btns = document.querySelectorAll('button');
+        btns[0].onclick = function() {
+            alert('hi~');
+        }
+        btns[0].onclick = function() {
+            alert('hello~');
+        }
+
+        // 2. 方法监听注册事件  addEventListener  
+        // (1) 里面的事件类型是字符串 必须加引号 而且不带on
+        // (2) 同一个元素 同一个事件可以添加多个监听器(事件处理程序)
+        btns[1].addEventListener('click',function(){
+            alert('你好');
+        });
+        btns[1].addEventListener('click',function(){
+            alert('你好不好');
+        });
+
+        // btns[2].attachEvent('onclick',function(){
+        //     alert('你好不好'); //  报错，因为现在不支持这个 attachEvent 函数
+        // });
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_获得鼠标在页面中的坐标</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        // 鼠标事件对象 MouseEvent
+        document.addEventListener('click',function(e) {
+            // 1. client 鼠标在 可视区 的X和Y坐标
+            console.log('X坐标是：' + e.clientX);
+            console.log('Y坐标是：' + e.clientY);
+            console.log('----------------------');
+            // 1. page 鼠标在 整个页面文档 的X和Y坐标
+            console.log('X坐标是：' + e.pageX);
+            console.log('Y坐标是：' + e.pageY);
+
+            console.log('----------------------');
+            // 1. screen 鼠标在 电脑屏幕 的X和Y坐标
+            console.log('X坐标是：' + e.screenX);
+            console.log('Y坐标是：' + e.screenY);
+        });
+    </script>
+</body>
+</html>

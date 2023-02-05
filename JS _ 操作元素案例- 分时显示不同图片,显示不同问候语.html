@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS _ 操作元素案例- 分时显示不同图片,显示不同问候语</title>
+    <style>
+        img{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 案例：分时显示不同图片,显示不同问候语 -->
+    <!-- 根据不同时间,页面显示不同图片,同时显示不同的问候语。
+         如果上午时间打开页面，示上午好,显示上午的图片。
+         如果下午时间打开页面，显示下午好,显示下午的图片。
+         如果晚_上时间打开页面，显示晚上好,显示晚上的图片。 -->
+    <!-- 案例分析：
+         根据系统不同时间来判断,所以需要用到日期内置对象
+         利用多分支语句来设置不同的图片
+         需要一个图片,并且根据时间修改图片,就需要用到操作元素src属性
+         需要一个div元素，显示不同问候语，修改元素内容即可 -->
+
+         <img src="imges\moning.webp" alt="">
+         <div>早上好</div>
+         <script>
+             // 1. 获取元素
+             var img = document.querySelector('img');
+             var div = document.querySelector('div');
+
+             // 2. 判断时间函数
+            //  function times(){
+            //      var times = new Date();
+            //      var h = times.getHours();
+            //     if(h >= '6' && h < '11'){
+            //         return  img.src = "imges/moning.webp" , div.innerHTML = '上午好';
+            //     }else if(h >'11' && h <= '14'){
+            //         return img.src = "imges/中午好.webp" , div.innerHTML = '中午好';
+            //     }else if(h > '16' && h <= '22'){
+            //         return img.src = "imges/晚上好.webp", div.innerHTML = '晚上好';
+            //     }
+            //  }
+            //  times();
+
+            // pink老师的
+             // 2. 得到当前的小时数
+             var times = new Date();
+             var h = times.getHours();
+             //3. 判断时间改变图片的文字信息
+             if (h < 10){
+                 img,src = "imges/moning.webp";
+                 div.innerHTML = '早上好';
+             }else if(h < 18){
+                img,src = "imges/中午好.webp";
+                div.innerHTML = '中午好';   
+             }else if(h < 23){
+                img.src = "imges/晚上好.webp";
+                div.innerHTML = '晚上好';   
+             }
+         </script>
+</body>
+</html>

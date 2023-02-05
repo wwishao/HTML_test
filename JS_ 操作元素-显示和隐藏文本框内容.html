@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS _ 操作元素-显示和隐藏文本框内容</title>
+    <style>
+        input{
+            color: rgb(167, 167, 167);
+        }
+    </style>
+</head>
+<body>
+
+    <!--
+        案例：显示和隐藏文本框内容
+
+        案例分析：
+         1. 首先表单需要2个新事件,获得焦点onfocus失去焦点onblur
+         2. 如果获得焦点，判断表单里面内容是否为默认文字,如果是默认文字,就清空表单内容
+         3. 如果失去焦点，判断表单内容是否为空,如果为空,则表单内容改为默认文字
+ -->
+
+    <!-- <input type="text" placeholder="手机"> -->
+
+    <!-- pink老师的 -->
+    <input type="text" value="手机">
+    <script>
+
+        // var text = document.querySelector('input');
+        // text.onclick = function(){
+        //     this.placeholder = '';
+        // }
+
+        // pink老师的
+        // 获取元素
+        var text = document.querySelector('input');
+        // 注册事件  获得焦点事件 onfocus
+        text.onfocus = function(){
+            // console.log('得到了焦点');
+            if(this.value === '手机' ){
+                this.value = '';
+            }
+            // 获得焦点需要把文本框里面的文字颜色变黑
+            this.style.color = 'black';
+        }
+        // 注册事件  失去焦点事件 onblur
+        text.onblur = function(){
+            // console.log('失去了焦点');
+            if(this.value === ''){
+                this.value = '手机'; 
+            // 失去焦点需要把文本框里面的文字颜色变浅
+            this.style.color = 'rgb(167, 167, 167)';
+            }
+
+        }
+
+    </script>
+</body>
+</html>

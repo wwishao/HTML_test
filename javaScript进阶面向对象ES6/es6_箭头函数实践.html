@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg"></div>
+    <script>
+        let div = document.querySelector('.bg')
+        div.addEventListener('click', function () {
+            setTimeout(() => {
+                this.style.background = 'pink';
+            }, 3000);
+        })
+
+        // 箭头函数数组查偶数
+        // 当形参有且只有一个时，小括号可不写 ， 当代码体只有一条语句的时候，花括号也可以不写
+        const arr = [1, 3, 4, 6, 9, 11,2,24];
+        let newArr = arr.filter(item => item % 2 === 0)
+        console.log(newArr);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS _ 数组对象--数组转换为字符串</title>
+</head>
+<body>
+    
+    <script>
+
+        // 数组转换为字符串
+        // 1. toString() 将数组转换为字符串
+        var arr = [1,2,3];
+        console.log(arr.toString());  // 1,2,3
+        // 2. join(分隔符) 里面用什么符号来分隔都可以
+        console.log(arr.join());
+        console.log(arr.join('&'));
+        console.log(arr.join('-'));
+    </script>
+</body>
+</html>

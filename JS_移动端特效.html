@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_移动端特效</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        // 移动端触摸事件
+        var div = document.querySelector('div');
+        div.addEventListener('touchstart',function(e) {  // touchstart 触摸DOM
+            console.log('摸一摸');
+            console.log(e);
+            // touches 正在触摸屏幕的所有手指的列表
+            // targetTouches 正在触摸当前DOM元素的手指列表
+            // changedTouches 手指状态发生了改变的列表  从无到有  或者  从有到无
+        })
+        div.addEventListener('touchmove',function() {  // touchmove 滑动DOM
+            console.log('再摸一摸');
+        })
+        div.addEventListener('touchend',function() {  // touchend 离开DOM
+            console.log('摸腻了，不摸了');
+        })
+    </script>
+</body>
+</html>

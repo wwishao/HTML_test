@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //        里面现存有100 块钱。
+        //        如果存钱,就用输入钱数加上先存的钱数,之后弹出显示余额提示框
+        //        如果取钱,就减去取的钱数,之后弹出显示佘额提示框
+        //        如果显示余额,就输出余额
+        //        如果退出,弹出退出信息提示框
+
+        var money = 100; // 定义初始金额100
+        var i = 1;  //定义 i 循环变量
+        while(i <= 1){
+            var option = prompt('请输入你需要的功能 \n 1.存钱 \n 2.取钱 \n 3.查询余额 \n 4.退出程序'); // 定义功能变量 option
+            switch(option){
+                case '1':   // 当输入 1 时弹出存钱功能
+                var save = prompt('请输入你存的钱数'); //定义 存钱变量 save
+                money += parseInt(save);  
+                alert('你现在的余额为：' + money);
+                    break;
+                case '2':   // 当输入 2 时弹出取钱功能
+                var withDrawal = prompt('请输入你要取的钱数'); // 定义 取钱变量 withDrawal
+                money -= parseInt(withDrawal);
+                if (withDrawal >= money){  // 如果取出的钱比总余额大，那么弹出 提示框 余额不足
+                    alert('可取余额不足');
+                }else{
+                    alert('你现在的余额为：' + money);
+                }
+                    break;
+                case '3':
+                    alert('你现在的余额为：' + money);
+                    break;
+            }
+            if (option == '4'){  // 输入 4 时 弹出退出  // 退出循环
+                alert('已退出程序');
+                break;
+            }
+            
+        }
+
+    </script>
+</body>
+</html>

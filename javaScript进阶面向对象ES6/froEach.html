@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let arr = [12,34,45,54];
+        let sum = 0;
+        arr.forEach(function(value,index,array) {
+            // console.log(value);
+            // console.log(index);
+            sum+=value
+        })
+        // console.log(sum);
+
+        let newArr = arr.filter(function(value,index) {
+            return value > 20;
+        })
+        // console.log(newArr);
+        let newArr1 = arr.some(function(value,index) {
+            return value == 12;
+        })
+        console.log(newArr1);
+    </script>
+</body>
+</html>

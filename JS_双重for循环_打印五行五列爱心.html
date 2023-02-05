@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS_双重for循环_打印五行五列爱心</title>
+</head>
+
+<body>
+	
+	<script>
+	
+		
+		// 双重for循环 打印五行五列爱心
+		
+		var str = '';
+		for(var i = 1; i <= 5; i++){  // 外层循环负责打印 5行
+			
+			for(var j = 1; j <= 5;j++){   // 里层循环负责一行打印五个星星
+				str +='❤';
+				
+			}
+			// 如果一行打印完毕5个星星就要另起一行 加 \n
+			str +='\n';
+		}
+		console.log(str);
+		
+		
+		// 用户控制输出数量
+		var rows = prompt('请输入你想打印多少行爱心');
+		var cols = prompt('请输入你想打印多少列爱心');
+		var str = '';
+		for(var i = 1; i <= rows; i++){  // 外层循环负责打印 rows 行
+			
+			for(var j = 1; j <= cols; j++){   // 里层循环负责一行打印五个星星  cols 列
+				str +='❤';
+				
+			}
+			// 如果一行打印完毕5个星星就要另起一行加 \n
+			str +='\n';
+		}
+		console.log(str);
+	</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS _ 密码框验证信息</title>
+    <style>
+        .p-psw{
+            display: inline-block;
+        }
+        .p1{
+            display: inline-block;
+            font-size: 12px;
+            color: rgb(177, 177, 177);
+            background:url(imges/mess.png) no-repeat left center;
+            padding-left: 20px;
+        }
+        .wrong{
+            color: red;
+            background-image:url(imges/wrong.png);
+
+        }.right{
+            color: green;
+            background-image: url(imges/right.png);
+        }
+    </style>
+</head>
+<body>
+    <p>手机号码：
+        <input type="text" placeholder="请输入手机号码">
+    </p>
+
+    <p class="p-psw">设置密码：
+        <input class="ipt" type="password" placeholder="请输入密码">
+        &nbsp
+    <p class="p1">请输入6~16位数的密码</p>
+    </p>
+
+    <script>
+        //首先判断的事件是表单失去焦点 onblur
+        //如果输入正确则提示正确的信息颜色为绿色小图标变化
+        // 如果输入不 是6到16位，则提示错误信息颜色为红色小图标变化
+        // 因为里 面变化样式较多，我们采取className修改样 式
+
+        // 获取元素
+        var ipt = document.querySelector('.ipt');
+        var p1 = document.querySelector('.p1');
+        // 2. 注册事件 失去焦点
+        ipt.onblur = function(){
+            if (this.value.length < 6 || this.value.length > 16){
+                p1.className = 'p1 wrong';
+                p1.innerHTML = '请输入的位数有误，请输入6~16位';
+            }else{
+                p1.className = 'p1 right';
+                p1.innerHTML = '输入符合要求';
+            }
+        }
+    </script>
+</body>
+</html>

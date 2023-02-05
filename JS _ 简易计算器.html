@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS _ 简易计算器</title>
+</head>
+<body>
+    
+    <script>
+
+    //     // 做一个简易计算器
+
+    // function getResults(num1,symbol,num2){
+    //     switch (symbol){
+    //         case '+' :
+    //             return num1 + num2;
+    //             break;
+    //             case '-' :
+    //             return num1 - num2;
+    //             break;
+    //             case '*' :
+    //             return num1 * num2;
+    //             break;
+    //             case '/' :
+    //             return num1 / num2;
+    //             break;
+    //         default:
+    //             alert('输入有误，请重新输入');
+    //     }
+    // }
+    // var re = getResults(parseInt(prompt('请输入第一个数字')),prompt('请输入运算符'),parseInt(prompt('请输入第二个数字')));
+    // alert(re);
+
+
+    var tan = prompt('1.+运算\n2.减法运算\n3.乘法运算\n4.除法运算\n5.退出');
+        //函数的特点，因为本身的特性，函数调用执行完毕，就垃圾回收
+        function jisuan(shuzi) {
+            var num1 = parseInt(prompt('第一个数字'));
+            var num2 = parseInt(prompt('第二个数字'));
+            var result;
+            switch (parseInt(shuzi)) {
+                // 判断要输入的状态
+                case 1:
+                    result = num1 + num2;
+                    break;
+                case 2:
+                    result = num1 - num2;
+                    break;
+                case 3:
+                    result = num1 * num2;
+                    break;
+                case 4:
+                    result = num1 / num2;
+                    break;
+                case 5:
+                    break;
+            }
+            alert(result);
+            tan = prompt('1.+运算\n2.减法运算\n3.乘法运算\n4.除法运算\n5.退出');
+
+        }
+
+        // 我们只能让他重复的输入，重复的调用函数
+        // 2.接下来交给函数来完成，包装在一个函数中，需要的时候，我们就调用函数
+
+        while (1 == 1) {
+            if (tan == '1') {
+                jisuan('1');
+            }
+            if (tan == '2') {
+                jisuan('2');
+            }
+            if (tan == '3') {
+                jisuan('3');
+            }
+            if (tan == '4') {
+                jisuan('4');
+            }
+            if (tan == '5') {
+                break;
+            }
+        }
+
+
+    </script>
+    </script>
+</body>
+</html>

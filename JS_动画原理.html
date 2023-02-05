@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_动画原理</title>
+    <style>
+        div{
+            position: absolute;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        span{
+            position: absolute;
+            left: 0;
+            top: 150px;
+            width: 300px;
+            height: 300px;
+            background-color: rgb(232, 8, 45);
+        }
+    </style>
+</head>
+<body>
+    <button class="btn500">点我pink盒子走500</button>
+    <button class="btn800">点我pink盒子走800</button>
+    <div></div>
+    <span></span>
+    <script>
+        var div = document.querySelector('div');
+        var span = document.querySelector('span');
+        // var divLeft = div.offsetLeft;
+        // function move() {
+        //     div.style.left = divLeft + div.offsetLeft + 1 + 'px';
+        //         if(div.offsetLeft + div.offsetWidth >= window.innerWidth){
+        //         clearInterval(countDown);
+        // }
+        // }
+        // var countDown = setInterval(move, 1);
+
+        //动画函数封装
+        // 给不同的元素添加不同的定时器 obj.countDown
+        function donghua(obj,width,callback) {
+            clearInterval(obj.countDown);
+            obj.countDown = setInterval( function () {
+            if(obj.offsetLeft == width ){
+                    clearInterval(obj.countDown);
+                    //回调函数写到定时器结束里面
+                    if(callback){  // 检查有没有callback函数 传进来
+                        callback(obj);
+                    }
+        }
+        // 把每次加1这个步长值改为个慢慢变小的值 步长公式: (目标值-现在的位置) / 10
+        // //把我们步长值改为整数不要出现小数的问题
+        // var step = Math.ceil((width - obj.offsetLeft) / 10);
+            var step = (width - obj.offsetLeft) / 10;
+                step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                obj.style.left = obj.offsetLeft +  step  + 'px';
+        },15);
+        }
+        // donghua(span,window.innerWidth,15);
+        var btn500 = document.querySelector('.btn500');
+        var btn800 = document.querySelector('.btn800');
+        btn500.addEventListener('click',function() {
+            donghua(div,500,back); // 当我们不断的点击按钮，这个元素的速度会越来越快，因为开启了太多的定时器, 运动长度也变长
+            // 解决方案就是让我们元素只有一个定时器执行  先清除以前的定时器，只保留当前的一个定时器执行
+            function back(obj) {
+                obj.style.backgroundColor = 'red';
+            }
+        });
+        btn800.addEventListener('click',function() {
+            donghua(div,800); 
+        });
+
+        //匀速动画就是盒子是当前的位置+固定的值10
+        //缓动动画就是 盒子当前的位置+变化的值(目标值-现在的位置) / 10)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            border: 1px solid #d9d9d9;
+            outline: none;
+            color: #b5b2bd;
+            padding: 2px 0 2px 10px;
+            height: 25px;
+            width: 136px;
+            box-sizing: border-box;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .pwd {
+            margin-left: 2px;
+            margin-right: 2px;
+        }
+        .change {
+            border: 1px solid pink;
+            vertical-align: top;
+        }
+        button {
+            background-color: #0098c2;
+            color: white;
+            border: none;
+            height: 25px;
+            width: 67px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" value="邮箱/ID/⼿机号" class="uname">
+    <input type="text" value="密码" class="pwd">
+    <button>登录</button>
+    <script>
+        var uname = document.querySelector('.uname');
+        var pwd = document.querySelector('.pwd');
+        uname.onfocus = function() {    
+            if (this.value !== '⼿机/ID/邮箱') {
+                this.className = 'uname change';
+                this.style.color = '#b5b2bd';
+            } else {
+                this.value = '';
+                this.className = 'uname change';
+            }
+        }
+        uname.onblur = function() {
+            if (this.value === '') {
+                this.value = '⼿机/ID/邮箱';
+                this.className = 'uname';
+            } else {
+                this.className = 'uname';
+                this.style.color = 'black';
+            }
+        }
+        pwd.onfocus = function() {
+            if (this.value !== '密码') {
+                this.className = 'pwd change';
+                this.style.color = '#b5b2bd';
+            } else {
+                this.value = '';
+                this.className = 'pwd change';
+                this.type = 'password';
+            }
+        }
+        pwd.onblur = function() {
+            if (this.value === '') {
+                this.value = '密码';
+                this.className = 'pwd';
+            } else {
+                this.className = 'pwd';
+                this.type = 'password';
+                this.style.color = 'black';
+            }
+        }
+    </script>
+</body>
+</html>

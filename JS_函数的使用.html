@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        // 函数使用分为两步: 声明函数和 调用函数
+        // 1. 声明函数 和 语法规范
+        // function 函数名(){
+            // 函数体
+        // }
+        function sayHi(){
+            console.log('hi~~');
+        }
+        // (1) function 是声明函数的关键字 全部小写
+        // (2) 函数 是做某件事情 ，函数名一般都是动词
+        // (3) 函数不被调用 不会被执行
+        
+        // 2. 调用函数 和 调用语法
+        // 函数名();
+        sayHi();
+        // 调用函数时不要忘记 加双括号()  !!!
+
+        // 利用函数求 1~100 的和
+        function getSum(){  // 声明函数
+            var sum = 0;
+            for (var i = 1; i <= 100; i++){
+                sum += i;
+            }
+            console.log(sum);
+        }
+        getSum();  // 调用函数
+    </script>
+</body>
+</html>

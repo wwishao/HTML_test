@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_发送短信案例</title>
+</head>
+<body>
+    <input type="text">
+    <button>获取验证码</button>
+    <script>
+        var btn = document.querySelector('button');
+        var dis = function() {
+            btn.disabled = 'true';
+            var timer = 5; // 设置多少秒后发送
+            countDown(); // 调用倒计时函数，提快页面响应
+            var timeDown = setInterval(countDown, 1000);  // 定时器
+            function countDown() {
+                    if(timer == -1){
+                        clearInterval(timeDown);
+                        btn.innerHTML = '获取验证码';
+                        btn.disabled = false;
+                    }else{
+                        btn.innerHTML = timer + '秒后再次发送';
+                        timer--;
+                    }
+            }
+        }
+        btn.addEventListener('click',dis);
+    </script>
+</body>
+</html>

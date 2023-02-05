@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_键盘常用的事件</title>
+</head>
+<body>
+    <script>
+        // 常用的键盘事件
+        // 1. kyeup  键盘弹起时触发
+        // document.onkeyup = function() {
+        //     console.log('我弹起了');
+        //     console.log('------------------');
+        // }
+        document.addEventListener('keyup',function() {
+            console.log('我弹起了'); 
+        });
+
+        // 2. keydown 键盘按下时触发  能识别功能键， ctrl shift 左右箭头 ALT 等
+        document.addEventListener('keydown',function() {
+            console.log('我按下了keydown');
+        });
+
+        // 3. keypress 键盘按下时触发  不能识别功能键， ctrl shift 左右箭头 ALT 等
+        document.addEventListener('keypress',function() {
+            console.log('我按下了keypress');
+        });
+
+        // 4. 三个事件的执行顺序  keydown ->  keypress -> keyup
+    </script>
+</body>
+</html>

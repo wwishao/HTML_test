@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS _ getElementById 获取元素</title>
+</head>
+<body>
+    
+    <div id="time">2022-4-24</div>
+    <script>
+
+        // 1. 因为文档页面 从上往下 加载，所以先得有标签 所以script写到标签的下面
+        // 2. get 获得 element 元素 by 通过  驼峰命名法
+        // 3. 参数  id是大小写敏感的字符串
+        // 4. 返回的是一个元素对象
+        var timer = document.getElementById('time');
+        console.log(timer); // 输出整个标签
+        console.log(typeof timer);
+        //  console.dir()  打印返回的元素对象 更好的查看里面的属性和方法
+        console.dir(timer);
+    </script>
+</body>
+</html>

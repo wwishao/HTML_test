@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            margin: 100px auto;
+            text-align: center;
+            line-height: 500px;
+            font-size: 50px;
+            transition: all 1s;
+            opacity: 1;
+        }
+        .close {
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            top: 0;
+            right: 0;
+            background-color: red;
+        }
+        button {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <i class="close"></i>
+        <span>大广告</span>
+    </div>
+    <button>显示</button>
+    <script>
+        let clos = document.querySelector('.close')
+        let div = clos.parentNode
+        clos.addEventListener('click',function () {
+            div.style.opacity = '0'
+            setTimeout(() => {
+                div.style.display = 'none'
+            }, 1000);
+        })
+
+        let btn = div.nextElementSibling
+        btn.addEventListener('click',function() {
+            div.style.display = 'block'
+            setTimeout(() => {
+                div.style.opacity = '1'
+            }, 500);
+        })
+
+    </script>
+</body>
+</html>

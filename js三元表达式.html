@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>js三元表达式</title>
+</head>
+
+<body>
+	
+<script>
+	// 1. 有三元运算符组成的式子我们称为三元表达式
+    // 2. ++num 3+5 ? :
+    // 3. 语法结构
+    // 条件表达式 ? 表达式1 : 表达式2
+	// 4. 执行思路
+	// 如果条件表达式结果为 真 则返回 表达式1 的值  如果表达式一为假  则返回 表达式二 的值
+	
+	
+	
+	// 代码体验
+	var sum = 10;
+	var result = sum >= 5? '是的' :'不是的'; //  表达式是有返回值的
+	console.log(result);
+	
+	
+	
+	/*
+	
+	// 类似
+	if (sum >= 5){
+		result = 是的
+	}else{
+		result = 不是的
+	}
+	
+	*/
+	</script>
+	
+<script>
+	// 用户输 入0~59之间的一个数字
+    // 如果数字小于10，则在这个数字前面补0，(加0) 否则不做操作
+    // 用一个变量接受这个返回值，输出
+	
+    var num = prompt('请输入一个随机数')    
+	// num < 10 ? alert(num = '0 ' + num) : alert(num) ;
+	
+	// pink老师写法
+	var num1 = num < 10 ? '0' + num : num;
+	alert(num1);
+	</script>
+</body>
+</html>

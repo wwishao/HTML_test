@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // 1. 数组 (array) : 就是一组数据的集合 储存在单个变量下的优雅方式
+        // 2. 利用 new 创建数组
+        var arr = new Array();  // 创建了一个空的数组
+        // 3. 利用数组字面量来创建数组
+        var arr = [];  // 创建了一个空的数组
+        var arr1 = [1, 2,3,'xiyan',true];
+        // 4. 数组里面的数据一定要用 逗号 隔开
+        // 5. 数组里面的数据 比如 ：1，2，等 称为数组元素
+        // 6. 获取数组元素 格式 数组名[索引号]  索引号从 0 开始！！！
+        console.log(arr1);
+        console.log(arr1[3]); // xiyan
+        console.log(arr1[4]); // true
+        var arr2 = ['疾风剑豪', '孤立无援','xiyan'];
+        console.log(arr2[0]);
+        console.log(arr2[1]);
+        console.log(arr2[2]);
+        console.log(arr2[3]); // 因为梦游这个数组元素 所以输出的是undefined
+
+        // 定义一个数组,里面存放星期- -、星期...... 直到星期日(共7天) , 在控制台输出:星期日
+        var arr3 = ['星期一','星期二','星期三','星期四','星期五','星期六','星期天'];
+        console.log(arr3[6]);
+    </script>
+</body>
+</html>

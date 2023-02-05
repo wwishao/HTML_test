@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_子节点第一个元素和最后一个元素</title>
+</head>
+<body>
+      <ol>
+        <li>li1</li>
+        <li>li2</li>
+        <li>li3</li>
+        <li>li4</li>
+      </ol>
+
+      <script>
+        var ol = document.querySelector('ol');
+        // 1. ol.firstChild 得到的是第一个元素节点 ，不管是文本节点还是元素节点
+        console.log(ol.firstChild);
+        console.log(ol.lastChild);
+console.log('---');
+        // 2. firstElementChild  返回的是第一个元素节点
+        console.log(ol.firstElementChild);
+        console.log(ol.lastElementChild);
+        console.log('---');
+        // 3.实际开发的写法  既没有兼容性问题又返回第-个子元素
+        console.log(ol.children[0]);
+        console.log(ol.children[ol.children.length-1]);
+
+      </script>
+</body>
+</html>

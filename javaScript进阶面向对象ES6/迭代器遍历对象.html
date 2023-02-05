@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const bj = {
+            name:'计应2004班',
+            stusten:['韦联幸','孙僮','黄彦淳','张三','李四','赵武',],
+            [Symbol.iterator]() {
+                let index = 0;
+                let _this = this;
+                return {
+                    next:function () {
+                    if(index < _this.stusten.length){
+                        const result = {value:_this.stusten[index],done:false}
+                        index++;
+                        return result;
+                    }else {
+                        return {value:undefined,done:true}
+                    }
+                }
+                }
+            }
+        }
+        console.log(bj);
+        for (const v of bj) {
+            console.log(v);
+        }
+    </script>
+</body>
+</html>

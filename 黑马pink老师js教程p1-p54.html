@@ -1,0 +1,536 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	
+	
+</head>
+
+<body>
+	 <script>
+		//1.声明一个age的变量。
+	var age;
+		//2.把值存到这个变量中。
+		age = 18;
+		//3.输出结果。
+		console.log(age);
+		 //4.变量初始化。
+		 var myname = 'xiyan';
+		 console.log(myname);
+		 
+		 console.log('---------------------');
+	</script>
+	
+	<script>
+		//1.声明多个变量写法一
+		var kakaname = '旗木卡卡西';
+		var address = '火影村';
+		var age = 30;
+		var email = 'kakaxi@itcast.cn';
+		var gz = 2000;
+		console.log(kakaname);
+		console.log(address);
+		console.log(age);
+		console.log(email);
+		console.log(gz);
+		
+		//2.声明多个变量写法二
+		/*
+		var kakaname = '旗木卡卡西',
+		    address = '火影村',
+			age = 30;
+			//.....
+		*/
+		
+		//3.声明变量特殊情况
+		//3.1 只声明，不赋值，结果是undefined,因为程序不知道里面存的是啥，没有定义
+		var sex;
+		console.log(sex);//输出undefined。
+		
+		//3.2 不声明，不赋值，直接输出。会报错
+		//console.log(tel);
+		
+		//3.3 不声明，直接赋值使用,也可以输出，不推荐使用。
+		qq =123;
+		console.log(qq);
+		
+		console.log('---------------------');
+		
+	</script>
+	
+	<script>
+		/* 
+		
+		//1.请输入你的名字  存储到myname变量里面
+       var myname = prompt('请输入你的名字');
+		//2.输出这个变量名。
+		alert( "欢迎光临！" + myname);
+		
+		*/
+	</script>
+	
+	<script>
+		//更新变量
+	var mname = 'qingbai';
+		console.log(mname);
+		mname = '情白';
+		console.log(mname);
+		
+		console.log('---------------------');
+	</script>
+	
+	<script>
+		//变量名大小写严格，两者输出不一样。
+	var app = 10,
+		App =  100;
+		console.log(app);
+		console.log(App);
+		//var 18age; 不能以数字开头。
+		//var var; 因为var是特殊意义，这个叫做关键字，关键字和 "保留字" 不能作为变量名。如：for,while,if等。  
+		//name 我们尽量不要直接使用name,作为变量名
+		
+		console.log('---------------------');
+	</script>
+	
+	<script>//交换两个变量的值。
+		//1. js是编程语言，有很强的逻辑性在里面：实现这个要求的思路，要先怎么做再怎么做
+		//2. 我们需要一个临时变量帮助我们。
+		//3. 把 apple1 里面的苹果给临时变量 temp
+		//4. 把apple2 里面的苹果给apple1
+		//5. 把临时变量里面的 temp 给apple2
+	var apple1 = '青苹果';
+	var	apple2 = '红苹果';
+	var	temp;
+		temp = apple1;
+		apple1 = apple2;
+		apple2 = temp;
+		console.log(apple1);
+		console.log(apple2);
+		
+		console.log('---------------------');
+	</script>
+	
+	<script>
+	    // int num=10; java
+		// var num; 这里的num我们不确定是属于哪种数据类型。
+		var num = 10; // 这里 num 属于数字型
+		// js的变量数据类型是只有程序在运行过程中，根据等号右边的值来确定的
+        var str = 'xiyan'; // 这里str属于字符串
+		// js是动态语言 变量的数据类型是可以变化的。
+		var x = 10; // x是数字型
+		    x = 'xiyan'; // x是字符串
+		
+		console.log('---------------------');
+	</script>
+	
+	<script> // 在js中八进制前面加0 ，在十六进制前面加0x 
+	    var num = 10; //num 数字型。
+		var PI = 3.14; // PI类型
+		
+		//1. 八进制 0~7 我们程序里面数字前面加 0 表示八进制。
+		
+		var num1 = 010;
+		console.log(num1); // 010 八进制转换为 10进制就是8。 
+		var num2 = 012; 
+		console.log(num2); 
+		
+		// 2.十六进制 0~9  a~f  #ffffff  数字的前面加 0x 表示十六进制。
+		var num3 = 0x9;
+		console.log(num3); 
+		var num4 = 0xa;
+		console.log(num4);
+		
+		// 3. 数字最大型。
+		console.log(Number.MAX_VALUE);
+		
+		// 4. 数字型最小值。
+		console.log(Number.MIN_VALUE);
+		
+		// 5. 无穷大
+		console.log(Number.MAX_VALUE * 2); // Infinity 无穷大
+		
+		// 6. 无穷小
+		console.log(-Number.MAX_VALUE * 2); // -Infinity 无穷小
+		
+		// 7. 非数字
+		console.log('xiyanx' - 100); // 输出NaN ，非数字
+		
+		console.log('---------------------');
+	</script>
+	
+	<script>
+	    // isNaN() 这个方法来判断数字  并且返回一个值 如果是数字返回的是false 如果不是数字返回true .
+		console.log(isNaN(12)); // 输出false
+		console.log(isNaN('xiyan')); // 输出true
+		
+		console.log('---------------------');
+	</script>
+	
+	<script>
+	    // JS可以用单引号嵌套双引号, 或者用双引号嵌套单引号(外双内单,外单内双) 
+		
+		var str = 'My name is xiyan';
+		console.log(str);
+		
+		// 字符串转义字符 都是用\开头但是这些转义字符写道引号里面
+		
+		var str1 = "my name is \n 'xiyan'"; // \n 换行
+		console.log(str1);
+		
+		console.log('---------------------');
+	</script>
+	
+	<script>
+	    /*
+		alert('酷热难耐,火辣的太阳底下,我挺拔的身姿,成为了最为独特的风景。\n我审视四周,这里,是我的舞台,我就是天地间的王者。 \n这一刻,我濠气冲天，终于大喊一声:"收破烂啦~" ');
+		*/
+		console.log('---------------------');
+	</script>
+	
+	<script>
+	    // 1. 检测获取字符串长度 length
+		var str = 'My name is xiyan';
+		console.log(str.length); // 输出16 ,My name is xiyan 加上空格一共有16个。
+		
+		// 2. 字符串拼接 +  只要有字符串和其他类型相拼接，最终的结果是字符串类型  +号口诀：数值相加，字符相连。
+		
+		console.log('沙漠' + '骆驼');  // 输出字符串 沙漠骆驼。
+		console.log('xiyan' + 20 + '岁');  // 输出 xiyan20岁
+		console.log(12+12); // 输出 24，因为两个都是数字，会相加。
+		console.log('12' + 12); // 输出 1212 ，因为这里前面的 12加了单引号，在这里属于字符串。
+		
+		console.log('---------------------');
+	</script>
+	
+	<script>
+	    console.log('xiyan' + 20 + '岁');
+		
+		var age = 21; 
+		// 我们变量不要写到字符串里面，是通过和字符串相连的方式实现的
+		console.log('xiyan' + age + '岁'); // 加上变量 age 并且输出
+		
+		console.log('---------------------');
+	</script>
+	
+	<script>
+		/*
+		
+		//弹出一个输入框(prompt), 让用户输入年龄(用户输入)
+        //把用户输入的值用变量保存起来,把刚才输入的年龄与所要输出的字符串拼接(程序内部处理)
+        //使用alert语句弹出警示框(输出结果) 
+
+		var age1 = prompt('请输入出生年份');
+		alert('你今年' + age1 + '岁了');
+		
+		
+		// 推荐下面这种写法
+		var age1 = prompt('请输入出生日期');
+		var str1 =('你今年' + age1 + '岁了');
+		alert(str1);
+		
+		*/
+		
+		console.log('---------------------');
+	</script>
+	
+	<script>
+	    var flag = true; // flag 布尔型
+		var flag1 = false; // flag 布尔型
+		console.log(flag + 1); // true 参与加法运算当 1 来看
+		console.log(flag1 + 1); // false 参与加法运算当 0 来看
+		
+		//如果一个变量声明未赋值就是undefined 未定义数据类型
+        var str;
+		console.log(str);
+		var variable = undefined;
+		console.log(variable + 'xiyan'); // 输出 undefinedxiyan
+		console.log(variable + 1); // 输出 NaN ，undefined 和数字相加最后的结果是NaN
+		
+		// null 空值
+		var space = null;
+		console.log(space + 'xiyan'); // 输出nullxiyan
+		console.log(space + 1); // 输出 1
+		
+		console.log('---------------------');
+	</script>
+	
+	<script>
+	    var num5 = 10;
+		console.log(typeof num5);
+		
+		var str2 = 'qingbai'; // 输出number
+		console.log(typeof str2); // 输出string
+		
+		var flag2 = true;
+		console.log(typeof flag2); // 输出boolean
+		
+		var vari = undefined;
+		console.log(typeof vari); // 输出undefined
+		
+		var timer = null;
+		console.log(typeof timer); //输出object
+		
+		/*
+		
+		// prompt 取过来的值是 字符型的
+		var age4 = prompt('请输入你的名字');
+		console.log(typeof age4);
+		
+		*/
+		
+		console.log('---------------------');
+	</script>
+	
+	<script>
+	    // 1. 把数字型转换成 字符串型 易记：变量.toString
+		var num6 = 10;
+		var str3 = num6.toString();
+		console.log(str3);
+		console.log(typeof str3);
+		
+		// 2. 利用String(变量)
+		console.log(String(num6));
+		
+		// 3. 利用 + 号拼接字符串的方法实现转换效果 隐式转换
+		console.log(num6 + '');
+		
+		// 4. parseInt(变量) 可以把字符型的转换为数字型 得到的是整数
+		
+		/*
+		var age4 = prompt('请输入你的年龄');
+		console.log(parseInt(age4));
+		*/
+		
+		console.log(parseInt('3.14')); // 输出浮点类型数字时取整数 3
+		console.log(parseInt('3.99')); // 取整 输出 3
+		console.log(parseInt('120px'));  //输出 120 会去掉px这个单位
+		console.log(parseInt('rem120px')); // 输出NaN 
+		
+		// 5. parseFlost(变量) 可以把字符型的转换为数字型 得到的是小数 或者浮点数
+		console.log(parseFloat('3.14'));
+		console.log(parseFloat('120px'));  //输出 120 会去掉px这个单位
+		console.log(parseFloat('rem120px')); // 输出NaN 
+		
+		// 6. 利用Number(变量)
+		var str4 = '123';
+		console.log(Number(str4));
+		console.log(Number('788'));
+		
+		// 7. 利用算数运算 -  *  / 隐式转换
+		console.log('5' - 1); // 输出4 
+		console.log('18' - '8');
+		console.log('18' * '2');
+		console.log('18' / '2');
+		
+		console.log('---------------------');
+	</script>
+	
+	<script>
+		// 1. 弹出一一个输入框( prompt) ,让用户输入出生年份(用户输入)
+        // 2. 把用户输入的值用变量保存起来,然后用今年的年份减去变量值,结果就是现在的年龄( 程序内部处理)
+        // 3. 弹出警示框( alert)，把计算的结果输出( 输出结果)
+
+		/*
+		
+		var year = prompt(' 请输入你的出生年份');
+	    var date = new Date();
+		var year1 = date.getFullYear(); // 获取当前年份 
+		var age2 = parseInt(year1) - parseInt(year); // 写法一
+		// var age2 = year1 - year; // 写法二 取过来的是字符串型但是这里用的减法有隐式转换
+		var str5 = '你今年' + age2 + '岁了';
+		alert(str5);
+		
+		*/
+	</script>
+	
+	<script>
+		// 先弹出第一个输入框,提示用户输入第一个值保存起来
+        // 再弹出第二个框,提示用户输入第二个值保存起来A
+        // 把这两个值相加,并将结果赋给新的变量(注意数据类型转换)
+        // 弹出警示框( alert)，把计算的结果输出( 输出结果)
+
+		/*
+		
+	    var num7 = prompt('请输入你的微信余额');
+		var num8 = prompt('请输入你的支付宝余额');
+		var rema = parseFloat(num7) + parseFloat(num8);
+		var str5 = '你的微信和支付宝余额为：' + rema;
+		alert(str5);
+		
+		*/
+		console.log('---------------------');
+	</script>
+	
+	<script>
+	    console. log (Boolean('')) ; // false
+        console. log (Boolean(0) ); // false
+        console. log ( Boolean(NaN) ) ; //false
+        console. log (Boolean (null)); // false
+        console. log (Boolean (undefined) ); // false
+        console .log (Boolean('小白')); // true
+        console. log (Boolean(12)) ; // true
+		
+		console.log('---------------------');
+	</script>
+	
+	<script>
+	    console.log(1 + 1); // 输出 2
+        console.log(1 -1); // 输出 0
+        console.log(1 * 1); // 输出 1
+        console.log(1 / 1); // 输出 1
+		
+        //1. %取余(取模)
+        console.log(4 % 2); // 输出 0 %求余数
+		console.log(5 % 3); // 输出 2
+		console.log(3 % 5); // 输出 3
+		
+		// 2. 浮点数 算数运算里面会有问题
+		console.log(0.1 + 0.2); // 输出 0.30000000000000004
+		console.log(0.07 * 100); // 输出 7.000000000000001
+		
+		// 3. 我们不能直接拿着浮点数来进行相比较是否相等
+        var num = 0.1 + 0.2;
+        console.log(num == 0.3); // false
+		
+		console.log('---------------------');
+	</script>
+	
+	<script>
+	    // 是由数字、运算符、变量等组成的式子我们称为表达式
+	
+		// 2就是返回值
+        //1+1=2
+        //在我们程序里面2=1+1  把我们的右边表达式计算完毕把返回值给左边
+         var num7 = 1 + 1; 
+		console.log(num7); 
+		
+		console.log('---------------------');
+	</script>
+	
+	<script>
+	    // 1. 想要一个变量自己加1  num8 = num8 + 1 ;比较麻烦。
+		var num8 = 1;
+		var num8 = num8 + 1;
+		console.log(num8);
+		
+		// 前置递增运算符 ++ 写在变量的前面
+		var num9 =10;
+		++num9; //类似于 num9 = num9 + 1
+		console.log(num9);
+		
+		// 3. 先自加1 再返回值
+		var p = 10;
+		console.log(++p + 10); //输出 21 p加1 后加 10  先自加1 再返回值
+		
+		// 4. 后置递增运算符
+		var num10 = 10;
+        num++; //num=num+1
+        ++num10;
+        console.log(num10);
+		
+        // 5. 前置自增和后置自增如果单独使用效果是一样的
+        // 6. 后置自增口诀:先返回原值后自加1
+        var age3 = 10;
+        console.log(age3++ + 10);
+        console.log(age3);
+		
+		console.log('---------------------');
+	</script>
+	
+	<script>
+        var a=10;
+        ++a; //  ++a 11  a=11
+        var b=++a + 2; //上面++a 的时候a=11 再进行++a后 a=12 ++a = 12
+        console.log(b); // 输出 14
+		
+        var C=10;
+        C++ ;
+        // C++ 11 C=11
+        var d= C++ +2; // 上面c++ 的时候 C++=11  C =12
+        console.log(d); // 输出 13
+		
+        var e=10;
+        var f=e++ + ++e;
+        // e++ = 10 e =11    前面e++ 的时候e=11 后面 ++e就等于 e=12 ++e=12
+        console.log(f); // 输出 22
+        //后置自增先表达式返回原值后面变量再自加1
+		
+		console.log('---------------------');
+	</script>
+	
+	<script>
+        console.log(3 >= 5); // false
+        console.log(2 <= 4); // true
+		
+        //1.我们程序里面的等于符号是 == 默认转 换数据类型会把字符串型的数据转换为数字型 只要求值相等就可以
+		
+        console.log(3 == 5); // false
+        console.log('pink老师' == '刘德华'); // flase
+        console.log(18 == 18); // true
+        console.log(18 == '18'); // true
+        console.log(18 != 18); // false
+		
+        // 2.我们程序里面有全等一模一样要求两侧的值还有数据类型完全一致才可以
+        console.log(18 === 18) ;
+        console.log(18 === '18' ); // false
+		
+		console.log('---------------------');
+	</script>
+	
+	<script>
+        // 1. 逻辑与 && and 两侧都为true结果才是 true只 要有一侧为false结 果就为false
+		
+        console.log(3 > 5 && 3 > 2); // false
+        console.log(3 < 5 && 3 > 2); // true
+		
+        // 2. 逻辑或| or 两侧都为false 结果才是假false 只要有一侧为true 结果就是true
+        console.log(3 > 5 || 3 > 2); // true
+        console.log(3 > 5 || 3 < 2); // false
+		
+        // 3. 逻辑非 not
+        console .log( !true); // false
+		
+		console.log('---------------------');
+	</script>
+	
+	<script>
+        // 1. 用我们的布尔值参与的逻辑运算 true && false == false
+        // 2. 123 && 456是值或者是表达式参与逻辑运算?
+        // 3. 逻辑与短路运算如果表达式1结果为真则返回表达式2如果 表达式1为假那么返回表达式
+		
+        console. log(123 && 456); // 456
+        console.log(0 && 456); // 0
+        console.log(0 && 1 + 2 && 456 * 56789); // 0
+        console.log(0 && 1 + 2 && 456 * 56789); // 0
+		
+        // 如果有空的或者否定的为假其余是真的 0 null undefined  NaN
+		
+		// 4. 逻辑 或 短路运算  如果表达式1 为真 则返回表达式1 如果表达式一为假  则返回表达式2 
+		console.log(123 || 456); // 123
+		console.log(0 || 123); // 123
+		console.log(0 || 456 || 789); //456
+		
+		// 逻辑中断很重要 它会影响程序的运行结果
+		var num11 = 0;
+        console.log(123 || num11++);  // 这里123 表达式为真，后面num11++ 就不再进行运算，所以num11输出的结果就还是0 
+        console . log(num11); // 0
+
+		
+		console.log('---------------------');
+	</script>
+	
+	<script>
+        var num = 10; // num = num + 1; num++ //num =num + 2;
+		//num += 2; 
+		// num += 2;
+        num += 5;
+        console . log(num);
+
+        var age = 2;
+        age *= 3;
+        console . log(age);
+		
+	</script>
+</body>
+</html>

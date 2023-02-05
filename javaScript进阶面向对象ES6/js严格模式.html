@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 为整个脚本（script标签）开启严格模式 -->
+    <script>
+        // 'use strict';  // 开启严格模式
+        // 下面的代码就会开启严格模式
+
+    </script>
+
+    <script>
+
+        // 只为fn函数开启严格模式
+        function fn() {
+            'use strict';
+        }
+
+        function fun() {
+
+        }
+        if(true){
+            function demo() {
+                'use strict';
+                console.log(1);
+            }
+            demo()
+            for (let i = 0; i < 10; i++) {
+               function demo1() {
+                console.log(2);
+               }
+                demo1()
+            }
+        }
+    </script>
+</body>
+</html>

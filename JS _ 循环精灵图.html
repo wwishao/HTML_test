@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS _ 循环精灵图</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style-type: none;
+        }
+        .box{
+            width: 250px;
+            margin: 100px auto;
+        }
+        .box li{
+            float: left;
+            width: 24px;
+            height: 24px;
+            background-color: plum;
+            background:url(imges/sprite.png) no-repeat;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 案例:循环精灵图背景
+         可以利用for循环设置一-组元素的精灵图背景
+
+         案例分析:
+          1. 首先精灵图图片排列有规律的
+          2. 核心思路:利用for循环修改精灵图片的背景位置background-position
+          3. 剩下的就是考验你的数学功底了
+          4. 让循环里面的i索引号* 44就是每个图片的y坐标
+        -->
+
+    <div class="box">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <script>
+
+        // 1. 获取元素  所有的li 标签
+        var lis = document.querySelectorAll('li');
+        for (var i = 0; i < lis.length; i++){
+            // 让索引号 乘以44 就是每个li 的背景y 坐标  index 就是y坐标
+            var index = i * 44;
+            lis[i].style.backgroundPosition = '0 -' + index + 'px';
+        }
+    </script>
+</body>
+</html>

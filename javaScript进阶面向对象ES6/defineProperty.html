@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object.defineProperty</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let obj = {
+            id:1,
+            pname:'小米',
+            price:1999,
+        }
+        // obj.sum = 100;
+        // Object.defineProperty  定义新属性或修改原来属性的方法
+        Object.defineProperty(obj,'sum',{
+            value:1000,
+        })
+        console.log(obj);
+
+        Object.defineProperty(obj,'id',{
+            writable:false,  // 如果值为false 则不允许修改这个属性值 默认值是false
+        })
+        Object.defineProperty(obj,'addree',{
+            value:'广西外国语',
+            writable:false,  // 如果值为false 则不允许修改这个属性值 默认值是false
+            enumerable:false,  // 如果值为false 则不允许遍历  默认值是false
+            configurable:false,  // 如果值为false 则不允许删除这个属性，还有不允许修改特性特效  默认值是false
+        })
+        console.log(obj);
+        // Object.keys(obj)  遍历对象，返回一个以数组形式储存的可枚举（）属性
+        console.log(Object.keys(obj));
+        // delete 可以删除对象的属性
+        delete obj.addree;
+        console.log(obj);
+        delete obj.pname;
+        console.log(obj);
+    </script>
+</body>
+</html>

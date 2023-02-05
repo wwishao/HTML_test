@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_利用函数判断闰年</title>
+</head>
+<body>
+    
+    <script>
+
+        // 利用函数判断闰年
+        // function isRunYear(year){
+        //     if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
+        //         return year + '是闰年';
+        //     }else{
+        //         return year + '是平年';
+        //     }
+            
+        // }
+        var year = parseInt(prompt('请输入年份'));
+        var RunYear = isRunYear(year);
+        alert(RunYear);
+
+        // pink老师写法
+        
+        function isRunYear(year) {
+            //如果是闰年我们返回true 否则返回false
+            var flag = false;
+            if(year % 4 == 0 && year % 100 != 0  || year % 400 == 0){
+            flag = true;
+            }
+            return flag;
+        }
+        // console.log(isRunYear (2000));
+        // console.log(isRunYear(1999));
+
+    </script>
+</body>
+</html>

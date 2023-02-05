@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_把1~10存放到数组中</title>
+</head>
+<body>
+
+    <script>
+        // 新建一个数组,里面存放10个整数( 1~10 )
+        // 1. 使用循环来追加数组。
+        // 2. 声明一个空数组 arr。
+        // 3. 循环中的计数器 i可以作为数组元素存入。
+        // 4. 由于数组的索引号是从0开始的,因此计数器从0开始更合适,存入的数组元素要 +1。
+
+        var arr =[];
+        for (var i = 0; i < 10; i++){
+            arr[i] = i + 1;  // 核心语句
+        }
+        console.log(arr);
+
+    </script>
+</body>
+</html>

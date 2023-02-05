@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS_接受用户名和密码for循环作业</title>
+</head>
+
+<body>
+	
+	<script>
+	
+		
+		//  接收用户输入的用户名和密码，若用户名为"admin" , 密码为"123456" ,则提示用户登录成功!否则,让用户一直输入。
+		var admin = prompt('请输入用户名'); // 定义 用户名变量为 admin 用 prompt获取用户输入 用户名 并储存起来
+		var pass = prompt('请输入密码'); // 定义 密码变量为 pass 用 prompt获取用户输入 密码 并储存起来
+		while (admin != 'admin' && pass != '123456'){ // 条件表达式  如果变量admin 的值不是admin 与 密码pass 不是 123456 则进入{循环体}
+			admin = prompt('请输入用户名');
+			pass = prompt('请输入密码');
+		}
+		alert('登录成功'); // 如果输入用户名为admin 密码为123456 弹出登录成功
+	</script>
+</body>
+</html>

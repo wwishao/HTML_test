@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS _ getElementsByTagName 获取元素</title>
+</head>
+<body>
+    <ul>
+        <li>知否知否，应是等你好久1</li>
+        <li>知否知否，应是等你好久2</li>
+        <li>知否知否，应是等你好久3</li>
+        <li>知否知否，应是等你好久4</li>
+        <li>知否知否，应是等你好久5</li>
+    </ul>
+
+    <ol id = "ol">
+        <li>知否知否1</li>
+        <li>知否知否2</li>
+        <li>知否知否3</li>
+        <li>知否知否4</li>
+        <li>知否知否5</li>
+    </ol>
+        
+        <script>
+
+            // 1. 使用 getElementsByTagName() 方法 返回带有 指定标签名 的对象的集合。  以伪数组形式存储
+            var lis = document.getElementsByTagName('li'); // 括号里面() 写 标签字符串 ''
+            console.log(lis);
+            console.log(lis[0]);
+            // 2. 想要依次打印里面的 元素对象 可以采取遍历的方式
+            for (var i = 0; i < lis.length; i++){
+                console.log(lis[i]);
+            }
+            
+            // 注意:
+            // (1). 因为得到的是一个对象的集合,所以我们想要操作里面的元素就需要遍历。
+            // (2). 得到元素对象是动态的
+            // 3. 如果页面中只有一个li  返回的也是一个伪数组形式
+            // 4. 如果页面中没有整个元素 返回的是一个空的伪数组形式
+
+            // 5. element.getElementsByTagName('标签名')   父元素必须是指定的单个元素
+            // var ol = document.getElementsByTagName('ol'); // [o1]
+            // console.log(ol[0].getElementsByTagName('li')); 
+            var ol = document.getElementById('ol');
+            console.log(ol.getElementsByTagName('li'));
+        </script>
+</body>
+</html>

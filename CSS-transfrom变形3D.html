@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-transfrom变形3D</title>
+    <style>
+        body{
+            /* 透视 */
+            perspective: 500px; 
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            position: relative;
+            margin: 100px auto;
+            /* 保持3D */
+            transform-style: preserve-3d;  
+            /* 过度动画 */
+            transition: all 1s; 
+        }
+        .box:hover{
+            transform: rotateY(80deg);
+        }
+        .box div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: pink;
+
+        }
+
+        .box div:last-child{
+            background-color: purple;
+            transform: rotateX(80deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

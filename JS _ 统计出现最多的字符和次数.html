@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS _ 统计出现最多的字符和次数</title>
+</head>
+<body>
+    
+    <script>
+        
+        //判断一个字 符串'abcoefoxyozzopp'中出现次数最多的字符，并统计其次数。
+        //o.a=1
+        //o.b=1
+        //0.C=1
+        //0.0=4
+        //核心算法:利用charAt() 遍历这个字符串
+        //把每个字符都存储给对象，如果对象没有该属性，就为1，如果存在了就+1
+        //遍历对象，得到最大值和该字符
+
+        var str = 'abcoefoxyozzopp';
+        var o = {};
+        for (var i = 0; i < str.length; i++){
+            var chars = str.charAt(i);  // chars 是字符串的每一个字符
+            if (o[chars]){  // o[chars] 得到的是属性值
+                o[chars]++;
+            }else{
+                o[chars] = 1;
+            }
+        }
+        console.log(o);
+        // 遍历对象
+        var max = 0;
+        var ch = '';
+        for(var k in o){
+            // k得到的是属性名
+            // o[k] 得到的是属性值
+            if (o[k] > max){
+                max = o[k];
+                ch = k;
+            }
+
+        }
+        console.log(max);
+        console.log('输出最多的字符是：' + ch);
+    </script>
+</body>
+</html>

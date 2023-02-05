@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_ 字符串操作方法</title>
+</head>
+<body>
+    
+    <script>
+
+        // 字符串操作方法
+        // 1. concat('字符串1','字符串二')
+        var str = 'andy';
+        console.log(str.concat('red'));
+        // 2. substr('截取的起始位置','截取几个字符串')
+        var str1 = '改革春风吹满地';
+        console.log(str1.substr(2,2)); // 第一个2 是从 索引号2 开始截取 ，第二个2是截取几个字符
+
+        // 3. 替换字符 replace('被替换的字符','替换为的字符')  它只会替换第一个 字符
+        console.log(str.replace('a','b'));
+
+        // 有一个字符串 ' abcoefoxyozzopp' 要求把里面所有的 o 替换为 *  循环
+        var str2 = 'abcoefoxyozzopp';
+        while (str2.indexOf('o') !== -1){
+            str2 = str2.replace('o','*');
+        }
+        console.log(str2);
+        // 4. 字符转换为数组 split('分隔符')
+        var str3 = 'red,blue,xiyan';
+        console.log(str3.split(','));
+        var str4 = 'red&blue&xiyan';
+        console.log(str4.split('&'));
+        console.log(str3.toUpperCase());
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS _ 利用构造函数创建对象</title>
+</head>
+<body>
+    
+    <script>
+
+        // 为什么要构造函数？
+        // 因为我们一次创建一个对象，里面很多的属性和方法是大量相同的我们只能复制
+        // 因此我们可以利用函数的方法重复这些相同的代码我们就把这个函数称为构造函数
+        // 又因为这个函数不一样，里面封装的不是普通代码，而是对象
+        // 构造函数  就是把我们对象里面一些相同的属性和方法抽象出来封装到函数里面
+
+
+        // 利用构造函数创建对象
+        // 我们需 要创建四大天王的对象相同的属性: 名字 年龄 性别 相同的方法: 唱歌
+        // 构造函数的语法格式   this 可以理解为当前的意思
+        // function 构造函数名() {
+        //     this.属性 = 值;
+        //     this.方法 = function() {}
+        // }
+        // new 构造函数名();  // 调用方法
+
+        function Star(uname,age,sex){
+            this.name = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function(sang){
+                console.log(sang);
+            }
+        }
+        var ldh = new Star('刘德华', 18,'男');   // 调用函数返回的是一个对象
+        console.log(ldh.name);
+        ldh.sing('冰雨');
+
+        var zxy = new Star('张学友',22,'男');
+        console.log(zxy.name);
+        console.log(zxy.age);
+        zxy.sing('李香兰');
+
+
+        // 1. 构造函数名 首字母要大写
+        // 2. 构造函数不需要 return 就可以返回结果
+        // 3. 调用构造函数必须使用new 
+        // 4. 我们只要new Star()  调用函数就创建一个对象 ldh {}
+        // 5. 我们的属性和方法前面必须添加 this
+    </script>
+
+    <script>
+
+        // 练习:请按照要求创建对象
+        // 利用构造函数创建两个英雄对象。函数中的公共部分包括:姓名属性(name) ,类型属性(type) , 血量属性( blood )和攻击方式( attack)。
+        // 英雄对象的信息如下:
+        // 廉颇力量型500血量 攻击:近战
+        // 后羿射手型100血量 攻击:远程
+
+        function Hero(heroName,type,blood){
+            this.name = heroName;
+            this.type = type;
+            this.blood = blood;
+            this.attack = function(attack){
+                console.log(attack);
+            }
+
+        }
+        var lp = new Hero('廉颇','力量型',500)
+        console.log(lp.name,lp.type,lp.blood);
+        lp.attack('近程');
+
+        var hy = new Hero('后羿','射手型',100);
+        console.log(hy.name,hy.type,hy.blood);
+        lp.attack('远程');
+    </script>
+</body>
+</html>

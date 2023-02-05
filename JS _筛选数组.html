@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS _筛选数组</title>
+</head>
+<body>
+    <script>
+
+    // 将数组[2, 0, 6, 1, 77,0, 52, 0, 25, 7]中大于等于10的元素选出来,放入新数组。
+    // 方法一
+    var arr = [2, 0, 6, 1, 77,0, 52, 0, 25, 7,100,60,55,88,20,14,10,23,12,0,1,3,4,5,6,7,9,13,15,16,22];
+    var newArr = [];
+    // var j = 0;  pingk老师写法
+    for (var i = 0; i < arr.length; i++){
+        if (arr[i] >= 10){
+            newArr += arr[i] + ',';
+            // newArr[j] = arr[i];  // 新数组索引号应该从0开始依次递增   pingk老师写法
+            // j++;  pingk老师写法
+        }
+        
+    }
+        console.log(newArr);
+
+        // 方法二
+    var arr = [2, 0, 6, 1, 77,0, 52, 0, 25, 7,100,60,55,88,20,14,10,23,12,0,1,3,4,5,6,7,9,13,15,16,22];
+    var newArr = [];
+    // 刚开始 newArr.length就是0
+    for (var i = 0; i < arr.length; i++){
+        if (arr[i] >= 10){
+            // 新数组索引号应该从0开始依次递增
+            newArr[newArr.length]= arr[i] + ',';
+        }
+        
+    }
+        console.log(newArr);
+
+
+        // 将数组[2, 0, 6, 1, 77, 0, 52, 0, 25, 7]中的0去掉后，形成一个不包含0的新数组。
+        // 1、需要一个新数组用于存放筛选之后的数据。
+        // 2、遍历原来的数组，把不是0的数据添加到新数组里面(此时要注意采用数组名+索引的格式接收数据)。
+        // 3、新数组里面的个数， 用length 不断累加。
+        var arr1 = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+        var newArr1 = [];
+        for (var j = 0; j < arr1.length; j++){
+            if (arr1[j] != 0){
+                newArr1[newArr1.length] = arr1[j];
+            }
+        }
+        console.log(newArr1);
+    </script>
+</body>
+</html>

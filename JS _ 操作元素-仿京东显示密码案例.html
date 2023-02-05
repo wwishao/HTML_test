@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS _ 操作元素-仿京东显示密码案例</title>
+    <style>
+        p{
+            width: 400px;
+            border-bottom: 1px solid rgb(137, 137, 137);
+            margin: 10px auto;
+        }
+        input{
+            width: 200px;
+            height: 30px;
+            border: 0;
+            outline: none;
+        }
+        img{
+            position: absolute;
+            top: 55px;
+            width: 30px;
+            margin-left: 104px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- 案例:仿京东显示密码
+         点击按钮将密码框切换为文本框,并可以查看密码明文。 -->
+    <!-- 案例分析
+         核心思路:
+         1.点击眼睛按钮,把密码框类型改为文本框就可以看见里面的密码
+         2. 一个按钮两个状态,点击一次,切换为文本框,继续点击一次切换为密码框
+         算法:利用一个flag变量,来判断flag的值,如果是1就切换为文本框, flag设置为0 ,如果是0就切换为密码框, flag设置为1
+ -->
+
+        <p>用户名：<input type="text" name="user" placeholder="请输入用户名"/></p>
+        
+        <p>密&nbsp&nbsp&nbsp码：<input id="pass" type="password" name="pass" placeholder="请输入密码"/>
+            <label for=""><img id="eye" src="imges\闭眼.png" alt=""></label></p>
+        
+        <script>
+
+            // 1.获取元素
+            var eye = document.getElementById('eye');
+            var pass = document.getElementById('pass');
+            // 2. 注册事件 处理程序
+            var flag = 0;
+            eye.onclick = function(){
+                // 点击一次之后 flag 一定要变化
+                if (flag == 0){
+                    pass.type = 'text';
+                    eye.src = 'imges/睁眼.png';
+                    flag = 1;  // 赋值操作 
+                }else{
+                    pass.type = 'password';
+                    eye.src = 'imges/闭眼.png';
+                    flag = 0;
+                }
+            }
+            
+        </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS _ H5新增获取元素方式</title>
+</head>
+<body>
+    
+    <div class="box">盒子1</div>
+    <div class="box">盒子2</div>
+    <div id="nav">
+        <ul>
+            <li>首页</li>
+            <li>产品</li>
+        </ul>
+    </div>
+    <script>
+
+        // H5新增获取元素方式  
+        // 1. document.getElementsByClassName(类名)  根据类名获取某些元素集合
+        var boxs = document.getElementsByClassName('box');
+        console.log(boxs);
+
+        // 2. querySelector 返回指定选择器的 第一个元素对象  里面的选择器需要 加符号 类选择器加 .  .box id选择器加# #nav  
+        // 标签不用加符号
+        var FristBox = document.querySelector('.box');
+        console.log(FristBox);
+        var nav = document.querySelector('#nav');
+        console.log(nav);
+        var li = document.querySelector('li');
+        console.log(li);
+
+        // 3. querySelectorAll()  返回指定选择器的 第所有元素对象集合
+        var allBox = document.querySelectorAll('.box');
+        console.log(allBox);
+        var lis = document.querySelectorAll('li');
+        console.log(lis);
+    </script>
+
+    <script>
+
+        // 获取body 元素
+        var bodyEle = document.body;
+        console.log(bodyEle);
+
+        // 获取html 元素
+        var htmlEle = document.documentElement;
+        console.log(htmlEle);
+    </script>
+</body>
+</html>

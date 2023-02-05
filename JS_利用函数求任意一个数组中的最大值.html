@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_利用函数求任意一个数组中的最大值</title>
+</head>
+<body>
+    
+    <script>
+
+        // 利用函数求任意一个数组中的最大值
+        // 求数组[5,2,99,101,67,77,222]中的最大数值。
+
+        function getArrMax(arr){  // arr接收一个数组  arr = [5,2,99,101,67,77,222]
+            var max = arr[0];
+            for (var i = 1; i <= arr.length; i++){
+                if (arr[i] > max){
+                   max = arr[i];
+            }
+        }
+        return  max;
+        }
+        // getArrMax([5,2,99,101,67,77,222]);  // 实参是一个 数组送给形参
+        // 在实际开发里面，经常用一个 变量来 接受函数的返回结果 使用更简单
+        var ArrMax = getArrMax([5,2,99,101,67,77,222]);
+        console.log(ArrMax);
+    </script>
+</body>
+</html>

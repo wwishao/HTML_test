@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS _ 世纪佳缘-用户名显示隐藏作业</title>
+    <style>
+        input{
+            display:inline-block;
+            width: 200px;
+            height: 25px;
+            border: 1px solid rgb(137, 137, 137);
+            outline: none;
+        }
+        button {
+            background-color: #0098c2;
+            color: white;
+            border: none;
+            height: 25px;
+            width: 67px;
+        }
+        .change{
+            border: 1px solid rgb(201, 32, 110);
+        }
+    </style>
+</head>
+<body>
+    <input class="ipt" type="text" placeholder="邮箱/ID/手机号码">
+    <input class="psw" type="password" placeholder="密码">
+    <button>登录</button>
+
+    <script>
+        // 1. 获取元素
+        var ipt = document.querySelector('.ipt');
+        var psw = document.querySelector('.psw');
+        // 2. 注册事件 焦点和点击
+        ipt.onfocus = function(){
+            this.className = 'change';
+            this.placeholder = '';
+        }
+        ipt.onblur = function(){
+            this.className = '';
+            this.placeholder = '邮箱/ID/手机号码';
+        }
+        psw.onfocus = function(){
+            this.className = 'change';
+            this.placeholder = '';
+        }
+        psw.onblur = function(){
+            this.className = '';
+            this.placeholder = '密码';
+        }
+    </script>
+</body>
+</html>

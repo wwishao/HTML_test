@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS _ 操作元素-修改样式属性</title>
+    <style>
+
+        div{
+            width: 200px;
+            height: 200px ;
+            background-color: #af356a;
+        }
+    </style>
+</head>
+<body>
+    <div>123</div>
+    
+    <script>
+
+        // 修改样式属性
+        // 1. 获取元素
+        var div = document.querySelector('div');
+        // 2. 注册事件 处理程序
+        div.onclick = function(){
+            // div.style 里面的属性采取驼峰命名法
+            this.style.backgroundColor = '#64259b';
+            this.style.width = '400px';
+        }
+    </script>
+</body>
+</html>

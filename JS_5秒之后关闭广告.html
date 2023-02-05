@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_5秒之后关闭广告</title>
+    <style>
+        .banner {
+            width: 900px;
+            height: 600px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+        .icon{
+            position: relative;
+            width: 60px;
+            height: 30px;
+            float: right;
+            line-height: 30px;
+            text-align: center;
+            font-size: 20px;
+            float: right;
+            user-select: none;
+            background-color: rgb(151, 153, 155);
+        }
+        .banner .icon i {
+            width: 30px;
+            height: 30px;
+            background-color: black;
+            color: aliceblue;
+            font-style: normal;
+            line-height: 30px;
+            text-align: center;
+            font-size: 30px;
+            float: right;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">大广告
+        <div class="icon">
+            <!-- <i>×</i> -->
+        </div>
+    </div>
+    <script>
+        var banner = document.querySelector('.banner');
+        var icon = document.querySelector('.icon');
+        var stl = setTimeout(djs,5000);
+        icon.onclick = function() {
+            clearTimeout(stl);
+            banner.style.display = 'none';
+        }
+        function djs() {
+            banner.style.display = 'none';
+        }
+        // function countDown() {
+        //         var nowTime = +new Date();  // 返回的时当前时间的总毫秒数 (时间戳)
+        //         var inputTime = +new Date(time);  // 返回的是用户输入的总毫秒数
+        //         var times = (inputTime - nowTime) / 1000;  // times 是剩余的总秒数
+        //         var d,h,m,s;
+        //         d = parseInt(times / 60 / 60 / 24);  // 天
+        //         h = parseInt(times / 60 / 60 % 24);  // 小时
+        //         // h = h < 10? '0' + h : h;
+        //         m = parseInt(times / 60 % 60);  // 分
+        //         // m = m < 10? '0' + m : m;
+        //         s = parseInt(times % 60 );   // 秒
+        //         // s = s < 10? '0' + s : s;
+        //         icon.innerHTML = s;
+        //     }
+    </script>
+</body>
+</html>

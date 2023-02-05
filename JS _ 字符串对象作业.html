@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS _ 字符串对象作业</title>
+</head>
+<body>
+    
+    <script>
+        
+        // "abaasdffggghjjkkgfdsssss3444343"
+        var str = "abaasdffggghjjkkgfdsssss3444343";
+        var index = str.indexOf('i'); // 查询str这个字符串有没有 i 这个字符
+            if (index === -1){
+                console.log('没有该字符');
+        }else{
+            console.log('有这个字符');
+        }
+        // console.log(str);
+
+        // 替换字符 g 替换22，ss 替换b
+        var str1 = "abaasdffggghjjkkgfdsssss3444343";
+        while (str1.indexOf('g') && str1.indexOf('ss') !== -1) {
+            str1 = str1.replace('g','22') && str1.replace('ss','b');
+        }
+        console.log(str1);
+
+        // 查找 截取起始位置到 结束位置的字符
+        var str2 = "abaasdffggghjjkkgfdsssss3444343";
+        console.log(str2.substr(0,3)); //从0 开始截取，取3个字符
+
+        // 查找字符串中出现最多的字符和出现次数
+        var str3 = "abaasdffggghjjkkgfdsssss3444343";
+        var o = {};
+        for (var i = 0; i < str3.length; i++){
+            var Str = str.charAt(i);
+            if (o[Str]){
+                o[Str]++;
+            }else{
+                o[Str] = 1;
+            }
+        }
+        // console.log(o);
+        var max = 0;
+        var chars = '';
+        for (var k in o){
+            if (o[k] > max){
+                max = o[k];
+                chars = k;
+            }
+           
+        }
+        console.log('出现次数最多的是' + chars + '出现了' + max + '次');
+    </script>
+</body>
+</html>

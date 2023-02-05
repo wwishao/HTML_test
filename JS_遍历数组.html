@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // 遍历数组：就是把所有 数组元素 从头到尾都访问一次
+        var arr = ['red','green','blue'];
+        for (var i = 0; i < 3; i++){
+            console.log(arr[i]);
+        }
+        // 1. 因为数组索引号从 0 开始 所以 i 必须从 0 开始 i < 3
+        // 2. 输出的时候 arr[i] i 计数器 当索引来用
+
+        // 案例 ：请将[”关羽”，"张飞”，“马超”，“赵云”，“黄忠”，“刘备”，”姜维”];数组里的元素依次打印到控制台。
+        var arr1 = ['关羽','张飞','马超','赵云','黄忠','刘备','姜维'];
+        for (var j = 0; j < 7; j++){
+            console.log(arr1[j]);
+        }
+        console.log(arr1.length);
+        // 使用 "数组名.length" 可以访问数组元素的数量(数组长度)
+
+        for (var j = 0; j < arr1.length; j++){
+            console.log(arr1[j]);
+        }
+        // 3. 数组的长度是元素个数 不要跟索引号混崤
+        // 4. 数组名.length 动态监测数组元素的个数
+
+    </script>
+
+</body>
+</html>

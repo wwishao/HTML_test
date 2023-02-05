@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS _ 新浪下拉菜单作业</title>
+    <style>
+        li{
+            list-style-type: none;
+        }
+        ul{
+            background-color: rgb(129, 129, 129);
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            微博
+            <li style="display: none;">私信</li>
+            <li style="display: none;">评论</li>
+            <li style="display: none;">@我</li>
+        </ul>
+    </div>
+    <script>
+        // 1. 获取元素
+        var lis = document.querySelectorAll('li');
+        var ul = document.querySelector('ul');
+        // 2. 注册事件 鼠标经过和离开
+        // 3. 因为li 标签有多个，所以要遍历
+        ul.onmouseover = function(){
+            if (lis[0].style.display == 'none' ) {
+			for(var i = 0;i < lis.length; i++){
+                lis[i].style.display = "block";
+
+			}
+		}
+	}
+    ul.onmouseout = function(){
+        if(lis[0].style.display == 'block'){
+			for(var i = 0;i < lis.length; i++){
+				lis[i].style.display = "none";
+
+			}
+		}
+    }
+	
+        
+    </script>
+</body>
+</html>

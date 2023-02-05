@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS _ 数组对象 _ 返回数组索引方法</title>
+</head>
+<body>
+    
+    <script>
+        // 返回数组索引方法  indexOf(数组元素) 从数组索引第一个 0 开始查找  作用就是 返回该数组元素中的 索引号
+        // lastIndexOf()  从数组索引最后一个 开始查找
+        // 它只返回第一个满足条件的索引号
+        // 它如果在该数组里面 找不到该元素 则返回 -1
+        var arr = ['red','green','blue','xiyan','xiyan'];
+        console.log(arr.indexOf('xiyan'));  // 3
+        console.log(arr.lastIndexOf('xiyan'));  // 4
+        console.log(arr.indexOf('pink'));  // -1
+    </script>
+</body>
+</html>

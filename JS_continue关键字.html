@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS_continue关键字</title>
+</head>
+
+<body>
+	
+	<script>
+	
+		
+		// continue 关键字
+		for(var i = 1;i <= 5;i++){
+			if(i == 3){
+				continue;  // 只要遇见 continue 就退出本次循环 直接跳到 i++ 进入下一个循环
+			}
+			console.log('我正在吃第'+i+'个包子');
+		}
+		
+		// 1. 求1~100之间， 除了能被7整除之外的整数和
+		var sum = 0;
+		for(var j = 1; j <= 100; j++){
+			if(j % 7 == 0){
+				continue;
+			}
+			sum += j;
+		}
+		console.log(sum);
+		
+	</script>
+	
+	<script>
+	
+		// break;直接退出整个循环
+		for(var i = 1; i <= 5; i++){
+			if(i == 3){
+				break;  // 只要遇见 berak 就直接退出循环
+			}
+			console.log('我正在吃第'+i+'个包子');
+		}
+		
+		
+		// 1. 求1~100之间， 除了能被7整除之外的整数和
+		var sum = 0;
+		for(var j = 1; j <= 100; j++){
+			if(j % 7 == 0){
+				break;  // // 只要遇见 berak 就直接退出循环
+			}
+			sum += j;
+		}
+		console.log(sum);
+	</script>
+</body>
+</html>

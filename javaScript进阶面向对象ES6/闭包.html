@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闭包</title>
+</head>
+
+<body>
+
+    <script>
+        // 闭包(closure) 有权访问另一个作用域里面的变量函数
+        // 简单理解就是一个作用域可以访问到另一个函数内部的局部变量就是闭包
+        // 闭包的作用：延申了变量的作用范围
+        function fn() {
+            let num = 10;
+            // function fun() {
+            //     console.log(num);
+            // }
+            return function fun() {
+                console.log(num);
+            }
+        }
+        let f = fn(); // 此时fn的返回值就是fun这个函数 ,此时外面的作用域就可以访问函数fn内部的局部变量
+        // 类似于
+        // let f = function fun() {
+        //     console.log(num);
+        // }
+        f();
+    </script>
+</body>
+
+</html>

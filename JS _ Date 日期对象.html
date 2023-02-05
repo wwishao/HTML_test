@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS _ Date 日期对象</title>
+</head>
+<body>
+    
+    <script>
+
+        // Date()  日期对象是一个构造函数  必须使用 new  来调用日期对象
+        var arr = new Array();  //创建个数组对象
+        var obj = new Object();  //创建了一个对象实例
+
+        // 1. 使用Date 如果梦游参数  返回系统当前的时间
+        var date = new Date();
+        console.log(date);
+
+        // 2. 输入参数 常用的写法  数字型  2022,4,20  或者是 字符串型  '2022-4-20 8:8:10'
+        var date1 = new Date(2022,4,20);
+        console.log(date1);  //  返回的是 May  5月  不是 4 月
+
+        var date2 = new Date('2022-4-20 8:8:10'); 
+        console.log(date2);  //  正常输出
+
+
+    </script>
+</body>
+</html>

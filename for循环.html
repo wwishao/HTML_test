@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>for循环</title>
+
+</head>
+
+<body>
+	<script>
+		
+	for(var str = 1; str <= 100; str++){
+			console.log('你好');
+		}
+		
+		// 可以让用户输入次数
+		var num = prompt('请输入次数')
+    for(var i = 1; i <=num; i++){
+		console.log('你好，xiyan');
+	}
+		
+		
+		// for 循环可以重复执行不同的代码  因为有初始变量 i 的存在  i每次循环都会变化
+		// 输出 1~100岁
+		for(var age = 1; age <= 100; age++){
+			if(age == 1){
+				console.log('这个人今年1岁了,他出生了');
+			}else if(age == 100){
+				console.log('这个人今年100岁了,他去世了');
+			}else{
+				console.log('这个人今年' + age + '岁了');
+			}
+		}
+	</script>
+</body>
+</html>

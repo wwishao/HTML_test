@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS _ 日期格式化对象 与 格式化时分秒</title>
+</head>
+<body>
+    
+    <script>
+
+            // 日期格式化
+            var date = new Date();
+            console.log(date.getFullYear());   // 返回当前时间的  年份  2022 
+            console.log(date.getMonth() + 1);  // 返回的 月份  比当前的月份小 1个月  可以加 1 就可以了
+            console.log(date.getDate());       // 返回当前的几号日期
+            console.log(date.getDay());        // 返回星期几  周一  到  周六 正常输出  但是星期天 返回的是 0 
+
+            // 写一个 2022年4月20日 星期三
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var dates = date.getDate();
+            var arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];  // 定义一个星期的数组
+            var day = date.getDay();
+            console.log('今天是：' + year + '年' + month + '月' + dates + '日' + arr[day] );  // arr[day] day当数组索引，来输出arr 数组里面的星期几
+    </script>
+
+    <script>
+
+        // 格式化日期  时分秒  
+        var date = new Date();
+        console.log(date.getHours());  // 时
+        console.log(date.getMinutes()); // 分
+        console.log(date.getSeconds());  // 秒
+
+        //要求封装一个函数返回当前的时分秒格式08:08:08
+        function getTimer() {
+            var time = new Date( );
+            var h = time . getHours( ) ;
+            h = h < 10? '0' + h : h;  // 补0，如果小于10就加上一个 字符串 '0'
+            var m = time . getMinutes();
+            m = m < 10? '0' + m : m;
+            var s = time . getSeconds();
+            s = s < 10? '0' + s : s;
+            return h + ':' + m + ':'+ s;
+        }
+        var time = getTimer();
+        console.log(time);
+    </script>
+</body>
+</html>

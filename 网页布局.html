@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul li{
+            list-style: none;
+        }
+        body{
+            background-color: rgb(236, 236, 236);
+        }
+        .header{
+            /* display: block; */
+            height: 40px;
+            background-color: #333333;
+        }
+        .header_nav ul li{
+            float: left;
+        }
+        .header_nav ul li a{
+            /* display: inline; */
+            text-decoration: none;
+            float: left;
+            color: azure;
+            width: 60px;
+            text-align: center;
+            line-height: 40px;
+            margin: 0 50px;
+        }
+        .header_nav ul li a:hover{
+            background-color: rgb(242, 113, 57);
+            -webkit-transition: all .2s linear;
+            transition: all .2s linear;
+
+        }
+        .nav{
+            width: 1226px;
+            height: 100px;
+            background-color: rgb(211, 100, 100);
+            margin: 0 auto;
+        }
+        main{
+            margin: 0 auto;
+            width: 1226px;
+        }
+        .main_left{
+            width: 234px;
+            height: 628px;
+            background-color: rgb(206, 134, 45);
+            float: left;  
+        }
+        .main_left img{
+            width: 234px;
+            height: 628px;
+        }
+        .banner{
+            float: right;
+            width: 992px;
+            height: 628px;
+            /* background-color: rgb(255, 255, 255); */
+        }
+        .banner ul {
+            width: 992px;
+            list-style: none;
+        }
+        .brick-item{
+            position: relative;
+            z-index: 1;
+            float: left;
+            height: 300px;
+            width: 234px;
+            margin-left: 14px;
+            margin-bottom: 14px;
+            background: rgb(255, 255, 255);
+            -webkit-transition: all .2s linear;
+            transition: all .2s linear;
+        }
+        .banner ul li a{
+            display: block;
+            height: 100%;
+            text-decoration: none;
+            padding: 20px 0;
+            color: black;
+        }
+        .banner ul li a img{
+            display: block;
+            width: 160px;
+            height: 160px;
+            margin: 0 auto;
+        }
+        h3{
+            font-size: 14px;
+            font-weight: 400;
+            text-align: center;
+            margin: 0 10px 2px;
+        }
+        .p1{
+            font-size: 12px;
+            height: 18px;
+            text-align: center;
+            margin: 0 10px 10px;
+            color: #b0b0b0;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .p2{
+            color: #ff6700;
+            font-size: 10px;
+            text-align: center;
+            margin: 0 10px 14px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header_nav">
+            <ul>
+                <li><a href="javascript:;">news</a></li>
+                <li><a href="javascript:;">news</a></li>
+                <li><a href="javascript:;">news</a></li>
+                <li><a href="javascript:;">news</a></li>
+                <li><a href="javascript:;">news</a></li>
+            </ul>
+        </div>
+    </header>
+    <nav class="nav"></nav>
+    <main>
+        <div class="main_left">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/fef86f3a976842446ec7c3f315cf253f.jpg?thumb=1&w=293&h=768&f=webp&q=90" alt="">
+        </div>
+        <div class="banner">
+            <ul>
+                <li class="brick-item">
+                    <a href="javascript:;">
+                        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a687e796bb4879cd0e93867177f800da.png?thumb=1&w=250&h=250&f=webp&q=90" alt="">
+                        <h3>Xiaomi MIX Fold 2</h3>
+                        <p class="p1">超轻薄折叠机身设计，小米自研微水滴形态转轴</p>
+                        <p class="p2">8999元起</p>  
+                    </a>
+                </li>
+                <li class="brick-item">
+                    <a href="javascript:;">
+                        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a687e796bb4879cd0e93867177f800da.png?thumb=1&w=250&h=250&f=webp&q=90" alt="">
+                        <h3>Xiaomi MIX Fold 2</h3>
+                        <p class="p1">超轻薄折叠机身设计，小米自研微水滴形态转轴</p>
+                        <p class="p2">8999元起</p>  
+                    </a>
+                </li>
+                <li class="brick-item">
+                    <a href="javascript:;">
+                        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a687e796bb4879cd0e93867177f800da.png?thumb=1&w=250&h=250&f=webp&q=90" alt="">
+                        <h3>Xiaomi MIX Fold 2</h3>
+                        <p class="p1">超轻薄折叠机身设计，小米自研微水滴形态转轴</p>
+                        <p class="p2">8999元起</p>  
+                    </a>
+                </li>
+                <li class="brick-item">
+                    <a href="javascript:;">
+                        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a687e796bb4879cd0e93867177f800da.png?thumb=1&w=250&h=250&f=webp&q=90" alt="">
+                        <h3>Xiaomi MIX Fold 2</h3>
+                        <p class="p1">超轻薄折叠机身设计，小米自研微水滴形态转轴</p>
+                        <p class="p2">8999元起</p>  
+                    </a>
+                </li>
+                <li class="brick-item">
+                    <a href="javascript:;">
+                        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a687e796bb4879cd0e93867177f800da.png?thumb=1&w=250&h=250&f=webp&q=90" alt="">
+                        <h3>Xiaomi MIX Fold 2</h3>
+                        <p class="p1">超轻薄折叠机身设计，小米自研微水滴形态转轴</p>
+                        <p class="p2">8999元起</p>  
+                    </a>
+                </li>
+                <li class="brick-item">
+                    <a href="javascript:;">
+                        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a687e796bb4879cd0e93867177f800da.png?thumb=1&w=250&h=250&f=webp&q=90" alt="">
+                        <h3>Xiaomi MIX Fold 2</h3>
+                        <p class="p1">超轻薄折叠机身设计，小米自研微水滴形态转轴</p>
+                        <p class="p2">8999元起</p>  
+                    </a>
+                </li>
+                <li class="brick-item">
+                    <a href="javascript:;">
+                        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a687e796bb4879cd0e93867177f800da.png?thumb=1&w=250&h=250&f=webp&q=90" alt="">
+                        <h3>Xiaomi MIX Fold 2</h3>
+                        <p class="p1">超轻薄折叠机身设计，小米自研微水滴形态转轴</p>
+                        <p class="p2">8999元起</p>  
+                    </a>
+                </li>
+                <li class="brick-item">
+                    <a href="javascript:;">
+                        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a687e796bb4879cd0e93867177f800da.png?thumb=1&w=250&h=250&f=webp&q=90" alt="">
+                        <h3>Xiaomi MIX Fold 2</h3>
+                        <p class="p1">超轻薄折叠机身设计，小米自研微水滴形态转轴</p>
+                        <p class="p2">8999元起</p>  
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

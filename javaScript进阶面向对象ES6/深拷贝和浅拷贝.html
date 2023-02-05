@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //浅拷贝只是拷贝一层，更深层次对象级别的只拷贝引用.
+        // 深拷贝拷贝多层， 每一级别的数据都会拷 贝.
+
+        var obj = {
+            id: 1,
+            name: 'andy',
+            msg: {
+                age: 18,
+            }
+        }
+        var o = {}
+        // 此时o的mag的地址都指向了obj的msg 属于同一个地址
+        // for (const key in obj) {
+        //     o[key] = obj[key]
+        // }
+        // // o.msg.age = 20
+        // o.id = 2
+        // console.log(o);
+        // console.log(obj);
+
+        // console.log('---------------');
+
+        // // 新拷贝方法 assign(拷贝对象，被拷贝对象)  浅拷贝
+        // Object.assign(o, obj)
+        // console.log(o);
+
+        // 深拷贝 利用递归
+        function deepCopy(newObj, oldObj) {
+            var Obj = {}
+            for (const key in oldObj) {
+                // 判断是否是数组
+                var item = oldObj[key]
+                if (item instanceof Array) {
+                    newObj[key] = []
+                    deepCopy(newObj[key], item)
+                } else if (item instanceof Object) {
+                    // 判断是否是对象
+                    newObj[key] = {}
+                    deepCopy(newObj[key], item)
+                } else {
+                    // 都不是则是简单类型
+                    newObj[key] = item
+                }
+            }
+        }
+        deepCopy(o,obj)
+        o.msg.age = 20
+        console.log(o);
+        console.log(obj);
+
+    </script>
+</body>
+
+</html>

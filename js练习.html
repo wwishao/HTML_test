@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<p>JavaScript 能够直接写入 HTML 输出流中：</p>
+	<script>
+	document.write("<h1>这是一个标题</h1>");
+	</script>
+	
+	<h1>我的第一个 JavaScript</h1>
+<p>
+JavaScript 能够对事件作出反应。比如对按钮的点击：
+</p>
+<button type="button" onClick="alert('欢迎光临')">点击</button>
+	
+<h1>我的第一段 JavaScript</h1>	
+<p id="demo">JavaScript 能改变 HTML 元素的内容。</p>
+	
+	<script>
+	function myfunction(){
+		x=document.getElementById("demo");// 找到元素
+		x. innerHTML="Hello javaScript!";	// 改变内容
+		//写法二
+		//document.getElementById("demo").innerHTML="Hello javaScript!";
+	}
+	</script>
+<button type="button" onClick="myfunction()">点击</button>
+	
+	
+<p id="demo2">JavaScript 能改变 HTML 元素的样式。</p>
+	<script>
+	function d2function(){
+		y=document.getElementById("demo2");
+		y.style.color="red";
+	}
+	</script>
+	<button type="button" onClick="d2function()">点击</button>
+	
+	<p>请输入数字。如果输入值不是数字，浏览器会弹出提示框。</p>
+	<input id="in1" type="text">
+
+	<script>
+	function infunction(){
+		var x=document.getElementById("in1").value;
+		if(x==""||isNaN(x))
+		{
+			alert("不是数字");
+		}
+	}
+	</script>
+	<button type="button" onClick="infunction()">点击</button>
+	
+
+	<p>我的第一个段落。</p>
+<button onclick="myFunction()">点我</button>
+<script>
+function myFunction() 
+{
+    document.write(Date());
+}
+</script>
+	
+	<h1>我的第一个 Web 页面</h1>
+
+<script>//方便调式javascript,可在谷歌浏览器开发者选项Console中查看。
+a = 5;
+b = 6;
+c = a + b;
+console.log(c);
+</script>
+
+<p  id="demo3"></p>	
+	<script>//输出数字number。
+	document.getElementById("demo3").innerHTML=123e5;
+	</script>
+	
+	<p id="demo4"></p>
+	<script>//输出字符串
+	document.getElementById("demo4").innerHTML="输出字符串";
+	</script>
+	
+	<p id="demo5"></p>
+	<script>//进行运算
+	document.getElementById("demo5").innerHTML=5*5*5;
+	</script>
+	
+	<p id="demo6"></p>
+	<script>//赋值输出
+	var num
+	num=13;
+		document.getElementById("demo6").innerHTML=num;
+	</script>
+	
+	<p id="demo7"></p>
+	<script>
+	document.getElementById("demo7").innerHTML=(5+5)*10;
+	</script>
+	
+	<script>
+	var x=10;
+		var y=5;
+		var z=x+y;
+		document.write(x +"</br>");
+		document.write(y+"</br>");
+		document.write(z+"</br>");
+	</script>
+	
+	<p>点击这里来创建变量，并显示结果。</p> 
+	<p id="demo8"></p>
+	<button onClick="mo8function()">点击</button> 
+	<script>
+	function mo8function(){
+		var carname="xiyan";//为carname赋值为xiyan。
+		document.getElementById("demo8").innerHTML=carname;//输出carname到id为demo8的标签中。
+	}
+	</script>
+	
+	<p>typeof 操作符返回变量或表达式的类型。</p>
+	<p id="demo9"></p>
+	<script>//变量的数据类型可以使用 typeof 操作符来查看
+	document.getElementById("demo9").innerHTML = 
+	typeof "john" + "<br>" + 
+	typeof 3.14 + "<br>" +
+	typeof false + "<br>" +
+	typeof [1,2,3,4] + "<br>" +
+	typeof {name:'john', age:34};
+	</script>
+	
+	<script>//输出数组
+	var i;
+	var cars=new Array();
+		cars[0]="Saab";
+		cars[1]="Volvo";
+		cars[2]="BMW";
+		for(i=0;i<cars.length;i++)
+			{
+				document.write(cars[i]+"</br>");
+			}
+	</script>
+	</br>
+	<script>
+	var person=
+	{  //定义对象进行赋值。，每个值以 name:value 对呈现。
+		firstname : "John",
+		lastname  : "Doe",
+		age       : 50,
+		id        : 5566
+	};
+	document.write(person.firstname + "今年" + person.age + "</br>");
+	document.write(person["lastname"] + "</br>");
+	</script>
+	
+	</br>
+
+<script>
+    var son;
+	var car="Volvo";
+	document.write(son + "</br>");
+	document.write(car + "</br>");
+	var car=null;
+	document.write(car + "</br>");
+</script>
+
+
+</body>
+</html>

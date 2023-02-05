@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_函数计算任意两个数的算术结果</title>
+</head>
+<body>
+    
+    <script>
+
+        // 写一个函数,用户输入任意两个数字的任意算术运算(简单的计算器小功能) , 并能弹出运算后的结果。
+        var num = parseFloat(prompt('请输入第一个数字'));
+        var symbols = (prompt('任意输入加减乘除'));
+        var num1 = parseFloat(prompt('请输入第二个数字'));
+        function getSum(num,num1){
+                return [num + num1,num - num1,num * num1,num / num1,];
+                
+        }
+        var sum = getSum(num,num1);
+                if (symbols == '+'){
+                    alert(sum[0]);
+                }else if (symbols == '-'){
+                    alert(sum[1]);
+                }else if (symbols == '*'){
+                    alert(sum[2]);
+                }else if (symbols == '/'){
+                    alert(sum[3]);
+                }
+    </script>
+</body>
+</html>

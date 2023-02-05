@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS_for循环课堂案例_1~100累加</title>
+</head>
+
+<body>
+	<script>
+		// 求 1~100 整数的和
+		// 需要循环100次，我们需要一个 计数器 i
+        // 我们需要-个存储结果的变量 sum，但是初始值一定是0
+        // 核心算法:1+2+3+ 4.....    sum = sum + i;
+		
+		var sum = 0;
+	for(var i = 1 ;i <= 100;i++){
+		// 写法一
+		// sum = sum + i;
+		
+		// 写法二
+		sum += i;
+	}
+		console.log(sum);
+		
+	</script>
+</body>
+</html>

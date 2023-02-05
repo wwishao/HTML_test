@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_5秒之后跳转页面</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        var div = document.querySelector('div');
+        var time = 5;
+        countDown();
+        function countDown() {
+           if(time == 0){
+            location.href = 'http://xxbc.cc';
+           }else{
+            time--;
+            div.innerHTML = time + '秒后进入<strong>XY网络论坛</strong>';
+           }
+           
+        }
+        setInterval(countDown,1000); // 计时器
+            
+    </script>
+</body>
+</html>

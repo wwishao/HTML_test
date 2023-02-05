@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS _ Math 对象随机数方法</title>
+</head>
+<body>
+    
+    <!-- <script>
+
+        // 1. Math 对象随机数方法  random() 返回一个随机的小数   0 <= x <1 0到1 之间   等于0 不包括1
+        // 2. 这个方法里面不跟参数
+        // 3. 返回参数  一个浮点型伪随机数字  在0 (包括0 )和1 (不包括)之间
+        // 4. 代码验证
+        console.log(Math.random());
+        // 5. 我们想要得到两个数之间的随机整数  并且  包含这2个整数
+        // Math.floor(Math.random() * (max - min + 1)) + min; 
+        function getRandom(min,max){
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        console.log(getRandom(1,10));
+        // 5. 随机点名
+        var arr = [ '张三','张三丰','张三疯子','李四','李思思','牛马','夏荷','陈坤','绿箭','黄渤'];
+        console.log(arr[getRandom(0,arr.length - 1)]); // arr.length - 1  为数组的长度  从0开始
+    </script> -->
+
+    <script>
+
+        // 案例:猜数字游戏
+        // 程序随机生成一个1~ 10之间的数字,并让用户输入-个数字
+        // 1.如果大于该数字,就提示，数字大了，继续猜;
+        // 2.如果小于该数字,就提示数字小了,继续猜;
+        // 3.如果等于该数字,就提示猜对了,结束程序。
+
+        // 猜数字游戏 执行思路
+        // 1.随机生成一个1~10的整数I我们需要用到Math. random() 方法。
+        // 2.需要一直猜到正确为止，所以需要直循环。
+        // 3.while循环更简单
+        // 4.核心算法:使用if else if多分支语句来判断大于、小于、等于。
+
+
+        // function getRandom(min,max){
+        //     return Math.floor(Math.random() * (max - min + 1)) + min;
+        // }
+        // var ranSum = getRandom(1,10);
+
+        //    while (true) {
+        //         var userSum = parseInt(prompt('请输入一个1~10之间的数字'));  
+        //         if (userSum > ranSum){
+        //             alert('数字大了，继续猜');
+        //         }else if (userSum < ranSum) {
+        //             alert('数字小了，继续猜');
+        //         }else{
+        //             alert('恭喜你，猜对了');
+        //             break;  // 退出整个循环  结束程序
+        //         } 
+        //     }
+
+    </script>
+
+    <script>
+
+        //  要求用户猜1~50之间的一个数字  但是只有10次猜的机会
+        function getRandom(min,max){
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        var ranSum = getRandom(1,50);
+        for (var i = 1; i <= 50; i++){
+            var userSum = parseInt(prompt('请输入一个1~10之间的数字，你有10次机会。'));
+            if (userSum > ranSum) {
+                alert('猜大了，继续猜');
+            } else if(userSum < ranSum){
+                alert('猜小了，继续猜');
+            }else if(userSum == ranSum){
+                alert('恭喜你，猜对了');
+                break;  //  猜对了退出循环
+            }else if (i >= 10){
+                alert('次数已用完！');
+                break;  //  i循环到10 ，用户输入等于10 时 退出循环
+            }
+        }
+    </script>
+</body>
+</html>

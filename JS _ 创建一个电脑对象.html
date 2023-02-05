@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS _ 创建一个电脑对象</title>
+</head>
+<body>
+    
+    <script>
+
+        // 1. 创建一个电脑对象,该对象要有颜色、重量、品牌、型号,可以看电影、听音乐、打游戏和敲代码。
+        var computer = {
+            computerColor : '黑色',
+            computerWeight : '2kg',
+            computerBrand : '苹果',
+            computerModel : 'macbook pro max',
+            methods: function() {
+                console.log('看电影' ,'听音乐','打游戏','敲代码');
+            }
+        }
+        // console.log(computer.computerColor);
+
+        for (var k in computer){
+            console.log(k);
+            console.log(computer[k]);
+            
+        }
+        computer.methods();
+    </script>
+
+    
+</body>
+</html>

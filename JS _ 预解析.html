@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS _ 预解析</title>
+</head>
+<body>
+    
+    <script>
+
+        // 1. 我们js引擎运行js分为两步: 预解析 代码执行
+        // (1). 预解析  js引擎会把js 里面所有的var 还有 function 提升到当前作用域的最前面
+        // (2). 代码执行 按照代码书写的顺序 从上往下执行
+        // 2. 预解析分为 变量预解析（变量提升）  和  函数预解析（函数提升）  不提升赋值操作
+        // (1) 变量提升  就是把所有变量声明  提升到当前的作用域最前面
+        // (2) 函数提升  就是把所有的函数声明  提升到当前作用域的最前面  不调用函数
+
+        // 案例二
+        var num = 10;
+        function fn() {
+            console. log (num) ;
+            var num = 20;
+            console. log (num) ;
+        }
+        fn() ;
+        //相当于以下代码
+        var num;
+            function fn() {
+                var num 
+                console.log(num);
+                var num = 20;
+                console.log(num);
+            }
+            num = 10;
+            fn();
+
+            // 案例三
+            var a = 18;
+            f1();
+            function f1() {
+                var b = 9;
+                console.log(a);
+                console.log(b);
+                var a = '123' ;
+                }
+                //相当于以下代码
+                var a;
+            function f1() {
+                var b;
+                var a;
+                b = 9;
+                console.log(a);
+                console.log(b);
+                a ='123';
+            }
+            a = 18;
+            f1();
+
+            //案例4
+            f2();
+            console.log(C) ;
+            console.log(B) ;
+            console.log(A) ;
+            function f2() {
+                var A = B = C = 9;
+                console.log(A);
+                console.log(B);
+                console.log(C);
+            }
+            // 相当于以下代码
+            // function f2() {
+            //     var A;
+            //     A = B = C = 9;
+            //     //相当于var a = 9; b = 9; c = 9;  // b 和 c 直接赋值没有var声明当全局变量看
+            //     //集体声明var A = 9,B = 9，C = 9;
+            //     console.log(A);
+            //     console.log(B);
+            //     console.log(C);
+            // }
+            // f2();
+            // console.log(C);
+            // console.log(B);
+            // console.log(A);
+
+    </script>
+</body>
+</html>

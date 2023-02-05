@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_输入一个数判断是否是素数</title>
+</head>
+<body>
+    
+    <script>
+
+        // 写一个函数,用户输入一个数判断是否是素数,并返弹出回值(又叫质数,只能被1和自身整数的数)
+        var num = parseInt(prompt('请输入任意一个数'));
+        function getPnum(num){
+            for (var i = 2; i <= num; i++){
+                if (num == i && num != 1){
+                    return num + '是质数';
+                }else if (num == 1 || num % i == 0){
+                    return num + '不是质数';
+                }
+            }
+        }
+        var Pnum = getPnum(num);
+        alert(Pnum);
+    
+
+        // var num = +prompt("请输入一个数：");
+		// for(var i = 2;i <= num;i++){
+		// 	if(num == i && num != 1)
+		// 	{
+		// 	document.write(num + "是质数");
+		// 	break;
+        //     }
+		// 	else if(num == 1 || num % i == 0 )
+		// 	{
+		// 		document.write(num + "不是质数");
+		// 		break;
+		// 	}	
+			
+		// }
+		// if(num == 1)
+		// document.write(num + "不是质数");
+    </script>
+</body>
+</html>

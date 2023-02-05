@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS _ 京东关闭广告作业</title>
+    <style>
+        .jd{
+            background-color: rgb(221,231,223);
+            height: 81px;
+
+            
+        }
+        .off{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 30px;
+            position:fixed;
+            color:aliceblue;
+            background-color: rgb(158, 158, 158);
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            margin-top: 10px;
+        }
+        .not{
+            /* 创建一个空的css */
+        }
+    </style>
+</head>
+<body>
+    <div class="jd">
+        <img src="imges\京东广告横幅.webp">
+        <i class="off" tabindex="0">×</i>
+    </div>
+    <script>
+        // 1. 获取元素
+        var off = document.querySelector('.off');
+        var div = document.querySelector('.jd');
+        var img = document.querySelector('img');
+        // 鼠标点击事件
+        off.onclick = function(){
+            img.src = '';
+            off.innerHTML = '';
+            div.className = 'not';
+            off.className = 'not';
+        }
+
+    </script>
+</body>
+</html>

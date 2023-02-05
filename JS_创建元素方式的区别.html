@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_创建元素方式的区别</title>
+</head>
+<body>
+    <button>点击</button>
+    <p>abc</p>
+    <div class="inner"></div>
+    <div class="create"></div>
+    <script>
+        // 三种创建元素方式的区别
+        // 1. document.write() 创建元素  如果页面文档流加载完毕，再调用这句话会导致页面重绘
+        // document.write是直接将内容写入页面的内容流,但是文档流执行完毕, 则它会导致页面全部重绘
+        // var btn = document.querySelector('button');
+        // btn.onclick = function(){
+        //     document.write('<div>123</div>');
+        // }
+
+
+        // 2. innerHTML 创建元素
+        var inner = document.querySelector('.inner');
+        inner.innerHTML = '<a href="#">百度</a>';
+        // 3. document.creatElement()  创建元素
+        var create = document.querySelector('.create');
+        var a = document.createElement('a');
+        a.innerHTML = "标签";
+        create.appendChild(a);
+
+    </script>
+</body>
+</html>

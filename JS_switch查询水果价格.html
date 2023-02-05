@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS_switch查询水果价格</title>
+</head>
+
+<body>
+	<script>
+		// 1. 弹出prompt输入框,让用户输入水果名称,把这个值取过来保存到变量中。
+		// 2. 将这个变量作为switch括号里面的表达式。
+        // 3. case 后面的值写几个不同的水果名称，注意-定要加引号,因为必须是全等匹配。 
+		// 4. 弹出不同价格即可。同样注意每个case之后加上break ,以便退出switch语句。
+        // 5. 将default设置为没有此水果。
+        var fruit = prompt('请输入你想查询的水果');
+		switch(fruit){
+			case '苹果':
+				alert(fruit + '价格为8块一斤');
+			break;
+			case '西瓜':
+				alert(fruit + '价格为2块一斤');
+			break;
+			case '葡萄':
+				alert(fruit + '价格为10块一斤');
+			break;
+			case '桃子':
+				alert(fruit + '价格为6块一斤');
+			break;
+			default:
+			alert('本店没有此水果');
+			
+		}
+	</script>
+</body>
+</html>

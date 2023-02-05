@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS _ 内置对象</title>
+</head>
+<body>
+    
+
+    <script>
+
+        
+        // Math 数学对象不是一个构造函数，所以我们不需要new来调用而是直接使用里面的属性和方法即可
+        console. log(Math.PI); // 一个属性圆周率
+        console.log(Math.max(12,85,42,496,888)); // 888
+        console. log(Math. max(-1, -10)); // -1
+        console .log(Math. max(1 ,99,' pink老师')); // NaN
+        console.log(Math.max()); // -Infinity
+
+        console.log(Math.min(54,59,23,87,4));  // 最小值  Math.min() 调用最小值
+
+
+
+        // 案例: 封装自己的数学对象
+        // 利用对象封装自己的数学对象里面有PI最大值和最小值
+        var myMath = {  // 定义一个名为 myMaht 的对象
+            PI: 3.141592653 ,
+            max: function(){
+                var max = arguments[0];  // 用 arguments  是为了接收所有的输入值 
+                for (var i = 1; i < arguments.length; i++){
+                    // if (arguments[i] > max) {
+                    //     max = arguments[i];
+                    // }
+
+                    // 三元表达式 方法：
+                    return arguments[i] > max? arguments[i] : max;
+                }
+                return max;
+            },
+            min: function(){
+                var min = arguments[0];
+                for (var i = 1; i <arguments.length; i++){
+                    // if (arguments[i] < min){
+                    //     min = arguments[i];
+                    // }
+
+                    // 三元表达式 方法：
+                    return arguments[i] < min? arguments[i] : min;
+                }
+                return min;
+            }
+        }
+        console.log(myMath.PI);
+        console.log('这个数组的最大值为：' +  myMath.max(1655,4,13,45,56,));
+        console.log('这个数组的最小值为：' + myMath.min(1655,4,13,45,56,));
+
+
+        // 1.绝对值方法
+        console.log(Math.abs(1)); // 1
+        console .log (Math.abs(-1)); // 1
+        console. log(Math.abs('-1')); // 隐武转换会把字符串型-1转换为数字型
+        console.log(Math.abs('xiyan'));  // NaN
+        // 2.三个取整方法
+        // (1) Math. floor()  floor -- 地板的意思  向下取整  往最小了取值
+        console.log(Math.floor(1.1)); // 1
+        console.log(Math.floor(1.9)); // 1
+        // (2) Math.ceil()    ceil ceil -- 天花板的意思  向上取整  往最大了取值
+        console.log(Math.ceil(1.1)); // 2
+        console.log(Math.ceil(1.9)); // 2
+        // (3) Math.round()   四舍五入  其他数字都是四舍五入，但是 .5  特殊它往大了取
+        console.log(Math.round(1.1));  // 1
+        console.log(Math.round(1.4));  // 1
+        console.log(Math.round(1.5));  // 2
+        console.log(Math.round(1.9));  // 2
+        console.log(Math.round(-1.1));  // -1
+        console.log(Math.round(-1.5));  // -1
+
+    </script>
+</body>
+</html>
